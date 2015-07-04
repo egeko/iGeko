@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  GEKO
+//
+//  Created by sebastien FOCK CHOW THO on 5/18/15.
+//  Copyright (c) 2015 eGokia. All rights reserved.
+//
+
+#ifndef GEKO_PrefixHeader_pch
+#define GEKO_PrefixHeader_pch
+
+#import "Variables.h"
+#import "GekoAPI.h"
+#import <MBProgressHUD.h>
+#import "sqlite3.h"
+#import "FMDatabase.h"
+
+#endif

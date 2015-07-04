@@ -1,0 +1,1092 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D1D15371B3A64C800F0988D /* ic_next_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D15361B3A64C800F0988D /* ic_next_white.png */; };
+		5D1E9B521B1424F700725D79 /* bc_connection_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E9B511B1424F700725D79 /* bc_connection_logo.png */; };
+		5D1E9B541B14253100725D79 /* bc_menu_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E9B531B14253100725D79 /* bc_menu_logo.png */; };
+		5D1E9B591B14259900725D79 /* station4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E9B551B14259900725D79 /* station4.jpg */; };
+		5D1E9B5A1B14259900725D79 /* station2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E9B561B14259900725D79 /* station2.jpg */; };
+		5D1E9B5B1B14259900725D79 /* station3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E9B571B14259900725D79 /* station3.jpg */; };
+		5D1E9B5C1B14259900725D79 /* station1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E9B581B14259900725D79 /* station1.png */; };
+		5D25E52F1B20166200847505 /* gps.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D25E52E1B20166200847505 /* gps.json */; };
+		5D25E5331B201B4D00847505 /* ic_engen_pins.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D25E5321B201B4D00847505 /* ic_engen_pins.png */; };
+		5D2E1F501B0B467400CAF30A /* ic_station_card_pay_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F4A1B0B467400CAF30A /* ic_station_card_pay_blue.png */; };
+		5D2E1F511B0B467400CAF30A /* ic_station_mobile_pay_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F4B1B0B467400CAF30A /* ic_station_mobile_pay_white.png */; };
+		5D2E1F521B0B467400CAF30A /* ic_station_mobile_pay_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F4C1B0B467400CAF30A /* ic_station_mobile_pay_blue.png */; };
+		5D2E1F531B0B467400CAF30A /* ic_station_card_pay_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F4D1B0B467400CAF30A /* ic_station_card_pay_white.png */; };
+		5D2E1F541B0B467400CAF30A /* ic_station_mobile_pay_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F4E1B0B467400CAF30A /* ic_station_mobile_pay_black.png */; };
+		5D2E1F551B0B467400CAF30A /* ic_station_card_pay_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F4F1B0B467400CAF30A /* ic_station_card_pay_black.png */; };
+		5D2E1F591B0B4D1900CAF30A /* ic_station_star_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F561B0B4D1900CAF30A /* ic_station_star_blue.png */; };
+		5D2E1F5A1B0B4D1900CAF30A /* ic_station_star_black.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F571B0B4D1900CAF30A /* ic_station_star_black.png.png */; };
+		5D2E1F5B1B0B4D1900CAF30A /* ic_station_star_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F581B0B4D1900CAF30A /* ic_station_star_white.png */; };
+		5D2E1F5E1B0B58AB00CAF30A /* ic_station_tick_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F5C1B0B58AB00CAF30A /* ic_station_tick_green.png */; };
+		5D2E1F5F1B0B58AB00CAF30A /* ic_station_tick_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F5D1B0B58AB00CAF30A /* ic_station_tick_gray.png */; };
+		5D2E1F611B0B597500CAF30A /* ic_station_tick_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F601B0B597500CAF30A /* ic_station_tick_blue.png */; };
+		5D2E1F641B0B5D2700CAF30A /* ic_station_card_pay_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F621B0B5D2700CAF30A /* ic_station_card_pay_gray.png */; };
+		5D2E1F651B0B5D2700CAF30A /* ic_station_mobile_pay_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E1F631B0B5D2700CAF30A /* ic_station_mobile_pay_gray.png */; };
+		5D3F23CE1B36B3A200D0FD15 /* GekoTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F23CD1B36B3A200D0FD15 /* GekoTransactionViewController.m */; };
+		5D3F23D21B36B73800D0FD15 /* GekoPaiementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F23D11B36B73800D0FD15 /* GekoPaiementTableViewCell.m */; };
+		5D409A921B16D8820044DD8A /* GekoSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D409A911B16D8820044DD8A /* GekoSettingViewController.m */; };
+		5D42FC8A1B0D97D500288D63 /* GekoShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D42FC891B0D97D500288D63 /* GekoShopViewController.m */; };
+		5D42FC901B0DA64F00288D63 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D42FC8F1B0DA64F00288D63 /* shop.json */; };
+		5D42FC981B0DDF0C00288D63 /* GekoShopCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D42FC971B0DDF0C00288D63 /* GekoShopCollectionViewCell.m */; };
+		5D42FC9A1B0DE6FA00288D63 /* ic_shop_default_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D42FC991B0DE6FA00288D63 /* ic_shop_default_item.png */; };
+		5D42FC9E1B0DEA7D00288D63 /* GekoShopDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D42FC9D1B0DEA7D00288D63 /* GekoShopDescriptionViewController.m */; };
+		5D42FCA21B0DFC2200288D63 /* GekoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D42FCA11B0DFC2200288D63 /* GekoMapViewController.m */; };
+		5D42FCA51B0DFFB400288D63 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D42FCA41B0DFFB400288D63 /* MapKit.framework */; };
+		5D42FCA81B0E081800288D63 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D42FCA71B0E081800288D63 /* MyLocation.m */; };
+		5D6CCF5E1B09A54A00C3472B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6CCF5D1B09A54A00C3472B /* main.m */; };
+		5D6CCF611B09A54A00C3472B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6CCF601B09A54A00C3472B /* AppDelegate.m */; };
+		5D6CCF671B09A54A00C3472B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6CCF651B09A54A00C3472B /* Main.storyboard */; };
+		5D6CCF691B09A54A00C3472B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6CCF681B09A54A00C3472B /* Images.xcassets */; };
+		5D6CCF6C1B09A54A00C3472B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6CCF6A1B09A54A00C3472B /* LaunchScreen.xib */; };
+		5D6CCF781B09A54A00C3472B /* GEKOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6CCF771B09A54A00C3472B /* GEKOTests.m */; };
+		5D6CCF8B1B09A70400C3472B /* ConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6CCF8A1B09A70400C3472B /* ConnectionViewController.m */; };
+		5D6CCF961B09B12F00C3472B /* ic_home_pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6CCF941B09B12F00C3472B /* ic_home_pass.png */; };
+		5D6CCF971B09B12F00C3472B /* ic_home_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6CCF951B09B12F00C3472B /* ic_home_user.png */; };
+		5D6CCF9C1B09B59F00C3472B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6CCF9B1B09B59F00C3472B /* MenuViewController.m */; };
+		5D6CCFCD1B0A184200C3472B /* GekoPaiementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6CCFCC1B0A184200C3472B /* GekoPaiementViewController.m */; };
+		5D6FFB411B0EEE450056A54E /* ic_map_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6FFB401B0EEE450056A54E /* ic_map_location.png */; };
+		5D6FFB451B0EF5040056A54E /* GekoProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6FFB441B0EF5040056A54E /* GekoProfileViewController.m */; };
+		5D6FFB4A1B0EFB1C0056A54E /* ic_profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D6FFB491B0EFB1C0056A54E /* ic_profile_pic.jpg */; };
+		5D7897E21B1C9FB200CE5B8A /* ic_logo_tiger_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D7897E11B1C9FB200CE5B8A /* ic_logo_tiger_gray.png */; };
+		5D7A87931B0B0D2C008BD86A /* ic_paiement_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D7A87921B0B0D2C008BD86A /* ic_paiement_next.png */; };
+		5D9F1F311B1D6AB5002D4A7A /* ic_menu_event_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9F1F2B1B1D6AB5002D4A7A /* ic_menu_event_clear.png */; };
+		5D9F1F321B1D6AB5002D4A7A /* ic_menu_gas_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9F1F2C1B1D6AB5002D4A7A /* ic_menu_gas_clear.png */; };
+		5D9F1F331B1D6AB5002D4A7A /* ic_menu_magasin_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9F1F2D1B1D6AB5002D4A7A /* ic_menu_magasin_clear.png */; };
+		5D9F1F341B1D6AB5002D4A7A /* ic_menu_map_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9F1F2E1B1D6AB5002D4A7A /* ic_menu_map_clear.png */; };
+		5D9F1F351B1D6AB5002D4A7A /* ic_menu_profile_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9F1F2F1B1D6AB5002D4A7A /* ic_menu_profile_clear.png */; };
+		5D9F1F361B1D6AB5002D4A7A /* ic_menu_setting_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9F1F301B1D6AB5002D4A7A /* ic_menu_setting_clear.png */; };
+		5D9F1F381B1D7588002D4A7A /* bc_profile_font.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9F1F371B1D7588002D4A7A /* bc_profile_font.png */; };
+		5DA433EB1B0C48DF00A78747 /* ic_station_logo_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA433EA1B0C48DF00A78747 /* ic_station_logo_station.png */; };
+		5DA743F71B2CA9A200060C71 /* ic_paiement_1_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA743F01B2CA9A200060C71 /* ic_paiement_1_white.png */; };
+		5DA743F81B2CA9A200060C71 /* ic_paiement_2_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA743F11B2CA9A200060C71 /* ic_paiement_2_white.png */; };
+		5DA743F91B2CA9A200060C71 /* ic_paiement_3_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA743F21B2CA9A200060C71 /* ic_paiement_3_white.png */; };
+		5DA743FA1B2CA9A200060C71 /* ic_paiement_4_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA743F31B2CA9A200060C71 /* ic_paiement_4_white.png */; };
+		5DA743FB1B2CA9A200060C71 /* ic_paiement_5_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA743F41B2CA9A200060C71 /* ic_paiement_5_white.png */; };
+		5DA743FC1B2CA9A200060C71 /* ic_paiement_6_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA743F51B2CA9A200060C71 /* ic_paiement_6_white.png */; };
+		5DA743FD1B2CA9A200060C71 /* ic_paiement_7_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA743F61B2CA9A200060C71 /* ic_paiement_7_white.png */; };
+		5DA743FF1B2CB25F00060C71 /* ic_paiement_8_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA743FE1B2CB25F00060C71 /* ic_paiement_8_white.png */; };
+		5DACB6941B1D653D0023565D /* ic_menu_event_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DACB68E1B1D653D0023565D /* ic_menu_event_custom.png */; };
+		5DACB6951B1D653D0023565D /* ic_menu_gas_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DACB68F1B1D653D0023565D /* ic_menu_gas_custom.png */; };
+		5DACB6961B1D653D0023565D /* ic_menu_magasin_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DACB6901B1D653D0023565D /* ic_menu_magasin_custom.png */; };
+		5DACB6971B1D653D0023565D /* ic_menu_map_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DACB6911B1D653D0023565D /* ic_menu_map_custom.png */; };
+		5DACB6981B1D653D0023565D /* ic_menu_profile_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DACB6921B1D653D0023565D /* ic_menu_profile_custom.png */; };
+		5DACB6991B1D653D0023565D /* ic_menu_setting_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DACB6931B1D653D0023565D /* ic_menu_setting_custom.png */; };
+		5DCC79581B26B438001803AA /* bc_illust_stations.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC79571B26B438001803AA /* bc_illust_stations.jpg */; };
+		5DCC79601B26BA22001803AA /* bc_illust_bbe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC79591B26BA22001803AA /* bc_illust_bbe.jpg */; };
+		5DCC79611B26BA22001803AA /* bc_illust_bricolage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC795A1B26BA22001803AA /* bc_illust_bricolage.jpg */; };
+		5DCC79621B26BA22001803AA /* bc_illust_mode.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC795B1B26BA22001803AA /* bc_illust_mode.jpg */; };
+		5DCC79631B26BA22001803AA /* bc_illust_ra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC795C1B26BA22001803AA /* bc_illust_ra.jpg */; };
+		5DCC79641B26BA22001803AA /* bc_illust_services.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC795D1B26BA22001803AA /* bc_illust_services.jpg */; };
+		5DCC79651B26BA22001803AA /* bc_illust_slv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC795E1B26BA22001803AA /* bc_illust_slv.jpg */; };
+		5DCC79661B26BA22001803AA /* bc_illust_supermarche.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC795F1B26BA22001803AA /* bc_illust_supermarche.jpg */; };
+		5DCC79681B26CC2C001803AA /* slv1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC79671B26CC2C001803AA /* slv1.jpg */; };
+		5DCC796B1B26E849001803AA /* GekoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC796A1B26E849001803AA /* GekoAPI.m */; };
+		5DD667F41B419EB10068B88C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD667F31B419EB10068B88C /* libsqlite3.dylib */; };
+		5DECC29A1B25AE37005F1410 /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DECC2991B25AE37005F1410 /* stations.json */; };
+		5DECC29D1B25CFBA005F1410 /* ic_navbar_menu_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DECC29C1B25CFBA005F1410 /* ic_navbar_menu_white.png */; };
+		5DF27DB01B1C1C030046EC49 /* bc_connection_font.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DF27DAF1B1C1C030046EC49 /* bc_connection_font.png */; };
+		5DF27DB21B1C1DB40046EC49 /* bc_general_font.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DF27DB11B1C1DB40046EC49 /* bc_general_font.png */; };
+		5DFD53281B215FE2008C1B11 /* logo_geko_stroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD53271B215FE2008C1B11 /* logo_geko_stroke.png */; };
+		5DFD532E1B21AEBD008C1B11 /* ic_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD532D1B21AEBD008C1B11 /* ic_back_white.png */; };
+		6E434A91FB4491841A57D001 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54459E14EF5E0137AE124BCF /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D6CCF721B09A54A00C3472B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D6CCF501B09A54A00C3472B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D6CCF571B09A54A00C3472B;
+			remoteInfo = GEKO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		54459E14EF5E0137AE124BCF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1D15361B3A64C800F0988D /* ic_next_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_next_white.png; sourceTree = "<group>"; };
+		5D1E9B511B1424F700725D79 /* bc_connection_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bc_connection_logo.png; sourceTree = "<group>"; };
+		5D1E9B531B14253100725D79 /* bc_menu_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bc_menu_logo.png; sourceTree = "<group>"; };
+		5D1E9B551B14259900725D79 /* station4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = station4.jpg; sourceTree = "<group>"; };
+		5D1E9B561B14259900725D79 /* station2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = station2.jpg; sourceTree = "<group>"; };
+		5D1E9B571B14259900725D79 /* station3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = station3.jpg; sourceTree = "<group>"; };
+		5D1E9B581B14259900725D79 /* station1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = station1.png; sourceTree = "<group>"; };
+		5D25E52E1B20166200847505 /* gps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gps.json; sourceTree = "<group>"; };
+		5D25E5321B201B4D00847505 /* ic_engen_pins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_engen_pins.png; sourceTree = "<group>"; };
+		5D2E1F4A1B0B467400CAF30A /* ic_station_card_pay_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_card_pay_blue.png; sourceTree = "<group>"; };
+		5D2E1F4B1B0B467400CAF30A /* ic_station_mobile_pay_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_mobile_pay_white.png; sourceTree = "<group>"; };
+		5D2E1F4C1B0B467400CAF30A /* ic_station_mobile_pay_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_mobile_pay_blue.png; sourceTree = "<group>"; };
+		5D2E1F4D1B0B467400CAF30A /* ic_station_card_pay_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_card_pay_white.png; sourceTree = "<group>"; };
+		5D2E1F4E1B0B467400CAF30A /* ic_station_mobile_pay_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_mobile_pay_black.png; sourceTree = "<group>"; };
+		5D2E1F4F1B0B467400CAF30A /* ic_station_card_pay_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_card_pay_black.png; sourceTree = "<group>"; };
+		5D2E1F561B0B4D1900CAF30A /* ic_station_star_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_star_blue.png; sourceTree = "<group>"; };
+		5D2E1F571B0B4D1900CAF30A /* ic_station_star_black.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_star_black.png.png; sourceTree = "<group>"; };
+		5D2E1F581B0B4D1900CAF30A /* ic_station_star_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_star_white.png; sourceTree = "<group>"; };
+		5D2E1F5C1B0B58AB00CAF30A /* ic_station_tick_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_tick_green.png; sourceTree = "<group>"; };
+		5D2E1F5D1B0B58AB00CAF30A /* ic_station_tick_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_tick_gray.png; sourceTree = "<group>"; };
+		5D2E1F601B0B597500CAF30A /* ic_station_tick_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_tick_blue.png; sourceTree = "<group>"; };
+		5D2E1F621B0B5D2700CAF30A /* ic_station_card_pay_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_card_pay_gray.png; sourceTree = "<group>"; };
+		5D2E1F631B0B5D2700CAF30A /* ic_station_mobile_pay_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_mobile_pay_gray.png; sourceTree = "<group>"; };
+		5D3F23CC1B36B3A200D0FD15 /* GekoTransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoTransactionViewController.h; sourceTree = "<group>"; };
+		5D3F23CD1B36B3A200D0FD15 /* GekoTransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoTransactionViewController.m; sourceTree = "<group>"; };
+		5D3F23D01B36B73800D0FD15 /* GekoPaiementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoPaiementTableViewCell.h; sourceTree = "<group>"; };
+		5D3F23D11B36B73800D0FD15 /* GekoPaiementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoPaiementTableViewCell.m; sourceTree = "<group>"; };
+		5D409A901B16D8820044DD8A /* GekoSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoSettingViewController.h; sourceTree = "<group>"; };
+		5D409A911B16D8820044DD8A /* GekoSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoSettingViewController.m; sourceTree = "<group>"; };
+		5D42FC881B0D97D500288D63 /* GekoShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoShopViewController.h; sourceTree = "<group>"; };
+		5D42FC891B0D97D500288D63 /* GekoShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoShopViewController.m; sourceTree = "<group>"; };
+		5D42FC8F1B0DA64F00288D63 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
+		5D42FC961B0DDF0C00288D63 /* GekoShopCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoShopCollectionViewCell.h; sourceTree = "<group>"; };
+		5D42FC971B0DDF0C00288D63 /* GekoShopCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoShopCollectionViewCell.m; sourceTree = "<group>"; };
+		5D42FC991B0DE6FA00288D63 /* ic_shop_default_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_shop_default_item.png; sourceTree = "<group>"; };
+		5D42FC9C1B0DEA7D00288D63 /* GekoShopDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoShopDescriptionViewController.h; sourceTree = "<group>"; };
+		5D42FC9D1B0DEA7D00288D63 /* GekoShopDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoShopDescriptionViewController.m; sourceTree = "<group>"; };
+		5D42FCA01B0DFC2200288D63 /* GekoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoMapViewController.h; sourceTree = "<group>"; };
+		5D42FCA11B0DFC2200288D63 /* GekoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoMapViewController.m; sourceTree = "<group>"; };
+		5D42FCA41B0DFFB400288D63 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5D42FCA61B0E081800288D63 /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
+		5D42FCA71B0E081800288D63 /* MyLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocation.m; sourceTree = "<group>"; };
+		5D6CCF581B09A54A00C3472B /* GEKO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEKO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D6CCF5C1B09A54A00C3472B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D6CCF5D1B09A54A00C3472B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D6CCF5F1B09A54A00C3472B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5D6CCF601B09A54A00C3472B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5D6CCF661B09A54A00C3472B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D6CCF681B09A54A00C3472B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5D6CCF6B1B09A54A00C3472B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5D6CCF711B09A54A00C3472B /* GEKOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEKOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D6CCF761B09A54A00C3472B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D6CCF771B09A54A00C3472B /* GEKOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GEKOTests.m; sourceTree = "<group>"; };
+		5D6CCF811B09A5EB00C3472B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5D6CCF821B09A60000C3472B /* Variables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variables.h; sourceTree = "<group>"; };
+		5D6CCF891B09A70400C3472B /* ConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionViewController.h; sourceTree = "<group>"; };
+		5D6CCF8A1B09A70400C3472B /* ConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionViewController.m; sourceTree = "<group>"; };
+		5D6CCF941B09B12F00C3472B /* ic_home_pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_pass.png; sourceTree = "<group>"; };
+		5D6CCF951B09B12F00C3472B /* ic_home_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_user.png; sourceTree = "<group>"; };
+		5D6CCF9A1B09B59F00C3472B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		5D6CCF9B1B09B59F00C3472B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		5D6CCFCB1B0A184200C3472B /* GekoPaiementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoPaiementViewController.h; sourceTree = "<group>"; };
+		5D6CCFCC1B0A184200C3472B /* GekoPaiementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoPaiementViewController.m; sourceTree = "<group>"; };
+		5D6FFB401B0EEE450056A54E /* ic_map_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_map_location.png; sourceTree = "<group>"; };
+		5D6FFB431B0EF5040056A54E /* GekoProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoProfileViewController.h; sourceTree = "<group>"; };
+		5D6FFB441B0EF5040056A54E /* GekoProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoProfileViewController.m; sourceTree = "<group>"; };
+		5D6FFB491B0EFB1C0056A54E /* ic_profile_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_profile_pic.jpg; sourceTree = "<group>"; };
+		5D7897E11B1C9FB200CE5B8A /* ic_logo_tiger_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_logo_tiger_gray.png; sourceTree = "<group>"; };
+		5D7A87921B0B0D2C008BD86A /* ic_paiement_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_next.png; sourceTree = "<group>"; };
+		5D9F1F2B1B1D6AB5002D4A7A /* ic_menu_event_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_event_clear.png; sourceTree = "<group>"; };
+		5D9F1F2C1B1D6AB5002D4A7A /* ic_menu_gas_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_gas_clear.png; sourceTree = "<group>"; };
+		5D9F1F2D1B1D6AB5002D4A7A /* ic_menu_magasin_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_magasin_clear.png; sourceTree = "<group>"; };
+		5D9F1F2E1B1D6AB5002D4A7A /* ic_menu_map_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_map_clear.png; sourceTree = "<group>"; };
+		5D9F1F2F1B1D6AB5002D4A7A /* ic_menu_profile_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_profile_clear.png; sourceTree = "<group>"; };
+		5D9F1F301B1D6AB5002D4A7A /* ic_menu_setting_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_setting_clear.png; sourceTree = "<group>"; };
+		5D9F1F371B1D7588002D4A7A /* bc_profile_font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bc_profile_font.png; sourceTree = "<group>"; };
+		5DA433EA1B0C48DF00A78747 /* ic_station_logo_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_station_logo_station.png; sourceTree = "<group>"; };
+		5DA743F01B2CA9A200060C71 /* ic_paiement_1_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_1_white.png; sourceTree = "<group>"; };
+		5DA743F11B2CA9A200060C71 /* ic_paiement_2_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_2_white.png; sourceTree = "<group>"; };
+		5DA743F21B2CA9A200060C71 /* ic_paiement_3_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_3_white.png; sourceTree = "<group>"; };
+		5DA743F31B2CA9A200060C71 /* ic_paiement_4_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_4_white.png; sourceTree = "<group>"; };
+		5DA743F41B2CA9A200060C71 /* ic_paiement_5_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_5_white.png; sourceTree = "<group>"; };
+		5DA743F51B2CA9A200060C71 /* ic_paiement_6_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_6_white.png; sourceTree = "<group>"; };
+		5DA743F61B2CA9A200060C71 /* ic_paiement_7_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_7_white.png; sourceTree = "<group>"; };
+		5DA743FE1B2CB25F00060C71 /* ic_paiement_8_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_paiement_8_white.png; sourceTree = "<group>"; };
+		5DACB68E1B1D653D0023565D /* ic_menu_event_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_event_custom.png; sourceTree = "<group>"; };
+		5DACB68F1B1D653D0023565D /* ic_menu_gas_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_gas_custom.png; sourceTree = "<group>"; };
+		5DACB6901B1D653D0023565D /* ic_menu_magasin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_magasin_custom.png; sourceTree = "<group>"; };
+		5DACB6911B1D653D0023565D /* ic_menu_map_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_map_custom.png; sourceTree = "<group>"; };
+		5DACB6921B1D653D0023565D /* ic_menu_profile_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_profile_custom.png; sourceTree = "<group>"; };
+		5DACB6931B1D653D0023565D /* ic_menu_setting_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_setting_custom.png; sourceTree = "<group>"; };
+		5DCC79571B26B438001803AA /* bc_illust_stations.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc_illust_stations.jpg; sourceTree = "<group>"; };
+		5DCC79591B26BA22001803AA /* bc_illust_bbe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc_illust_bbe.jpg; sourceTree = "<group>"; };
+		5DCC795A1B26BA22001803AA /* bc_illust_bricolage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc_illust_bricolage.jpg; sourceTree = "<group>"; };
+		5DCC795B1B26BA22001803AA /* bc_illust_mode.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc_illust_mode.jpg; sourceTree = "<group>"; };
+		5DCC795C1B26BA22001803AA /* bc_illust_ra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc_illust_ra.jpg; sourceTree = "<group>"; };
+		5DCC795D1B26BA22001803AA /* bc_illust_services.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc_illust_services.jpg; sourceTree = "<group>"; };
+		5DCC795E1B26BA22001803AA /* bc_illust_slv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc_illust_slv.jpg; sourceTree = "<group>"; };
+		5DCC795F1B26BA22001803AA /* bc_illust_supermarche.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc_illust_supermarche.jpg; sourceTree = "<group>"; };
+		5DCC79671B26CC2C001803AA /* slv1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slv1.jpg; sourceTree = "<group>"; };
+		5DCC79691B26E849001803AA /* GekoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GekoAPI.h; sourceTree = "<group>"; };
+		5DCC796A1B26E849001803AA /* GekoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GekoAPI.m; sourceTree = "<group>"; };
+		5DD667F31B419EB10068B88C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		5DECC2991B25AE37005F1410 /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
+		5DECC29C1B25CFBA005F1410 /* ic_navbar_menu_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_navbar_menu_white.png; sourceTree = "<group>"; };
+		5DF27DAF1B1C1C030046EC49 /* bc_connection_font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bc_connection_font.png; sourceTree = "<group>"; };
+		5DF27DB11B1C1DB40046EC49 /* bc_general_font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bc_general_font.png; sourceTree = "<group>"; };
+		5DFD53271B215FE2008C1B11 /* logo_geko_stroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_geko_stroke.png; sourceTree = "<group>"; };
+		5DFD532D1B21AEBD008C1B11 /* ic_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back_white.png; sourceTree = "<group>"; };
+		6304FC02E4D6C33BBE7CCCA2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A8C5F9A858B46839C42B8BC1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D6CCF551B09A54A00C3472B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DD667F41B419EB10068B88C /* libsqlite3.dylib in Frameworks */,
+				5D42FCA51B0DFFB400288D63 /* MapKit.framework in Frameworks */,
+				6E434A91FB4491841A57D001 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D6CCF6E1B09A54A00C3472B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35EDD8D8636FA73F8A4AE43B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6304FC02E4D6C33BBE7CCCA2 /* Pods.debug.xcconfig */,
+				A8C5F9A858B46839C42B8BC1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5D1D15351B3A639300F0988D /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				5D1D15361B3A64C800F0988D /* ic_next_white.png */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
+		5D2E1F491B0B466B00CAF30A /* Station */ = {
+			isa = PBXGroup;
+			children = (
+				5DA433EA1B0C48DF00A78747 /* ic_station_logo_station.png */,
+				5D2E1F621B0B5D2700CAF30A /* ic_station_card_pay_gray.png */,
+				5D2E1F631B0B5D2700CAF30A /* ic_station_mobile_pay_gray.png */,
+				5D2E1F601B0B597500CAF30A /* ic_station_tick_blue.png */,
+				5D2E1F5C1B0B58AB00CAF30A /* ic_station_tick_green.png */,
+				5D2E1F5D1B0B58AB00CAF30A /* ic_station_tick_gray.png */,
+				5D2E1F561B0B4D1900CAF30A /* ic_station_star_blue.png */,
+				5D2E1F571B0B4D1900CAF30A /* ic_station_star_black.png.png */,
+				5D2E1F581B0B4D1900CAF30A /* ic_station_star_white.png */,
+				5D2E1F4A1B0B467400CAF30A /* ic_station_card_pay_blue.png */,
+				5D2E1F4B1B0B467400CAF30A /* ic_station_mobile_pay_white.png */,
+				5D2E1F4C1B0B467400CAF30A /* ic_station_mobile_pay_blue.png */,
+				5D2E1F4D1B0B467400CAF30A /* ic_station_card_pay_white.png */,
+				5D2E1F4E1B0B467400CAF30A /* ic_station_mobile_pay_black.png */,
+				5D2E1F4F1B0B467400CAF30A /* ic_station_card_pay_black.png */,
+			);
+			name = Station;
+			sourceTree = "<group>";
+		};
+		5D3F23CF1B36B3A800D0FD15 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				5D3F23CC1B36B3A200D0FD15 /* GekoTransactionViewController.h */,
+				5D3F23CD1B36B3A200D0FD15 /* GekoTransactionViewController.m */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
+		5D409A8F1B16D86B0044DD8A /* GekoSetting */ = {
+			isa = PBXGroup;
+			children = (
+				5D409A901B16D8820044DD8A /* GekoSettingViewController.h */,
+				5D409A911B16D8820044DD8A /* GekoSettingViewController.m */,
+			);
+			name = GekoSetting;
+			sourceTree = "<group>";
+		};
+		5D42FC841B0D97A200288D63 /* GekoShop */ = {
+			isa = PBXGroup;
+			children = (
+				5D42FC9B1B0DEA6400288D63 /* GekoShopDescription */,
+				5D42FC881B0D97D500288D63 /* GekoShopViewController.h */,
+				5D42FC891B0D97D500288D63 /* GekoShopViewController.m */,
+				5D42FC961B0DDF0C00288D63 /* GekoShopCollectionViewCell.h */,
+				5D42FC971B0DDF0C00288D63 /* GekoShopCollectionViewCell.m */,
+			);
+			name = GekoShop;
+			sourceTree = "<group>";
+		};
+		5D42FC8B1B0D9A5B00288D63 /* GekoShop */ = {
+			isa = PBXGroup;
+			children = (
+				5D42FC991B0DE6FA00288D63 /* ic_shop_default_item.png */,
+			);
+			name = GekoShop;
+			sourceTree = "<group>";
+		};
+		5D42FC9B1B0DEA6400288D63 /* GekoShopDescription */ = {
+			isa = PBXGroup;
+			children = (
+				5D42FC9C1B0DEA7D00288D63 /* GekoShopDescriptionViewController.h */,
+				5D42FC9D1B0DEA7D00288D63 /* GekoShopDescriptionViewController.m */,
+			);
+			name = GekoShopDescription;
+			sourceTree = "<group>";
+		};
+		5D42FC9F1B0DFC1500288D63 /* GekoMap */ = {
+			isa = PBXGroup;
+			children = (
+				5D42FCA01B0DFC2200288D63 /* GekoMapViewController.h */,
+				5D42FCA11B0DFC2200288D63 /* GekoMapViewController.m */,
+				5D42FCA61B0E081800288D63 /* MyLocation.h */,
+				5D42FCA71B0E081800288D63 /* MyLocation.m */,
+			);
+			name = GekoMap;
+			sourceTree = "<group>";
+		};
+		5D42FCA31B0DFC2800288D63 /* GekoMap */ = {
+			isa = PBXGroup;
+			children = (
+				5D6FFB401B0EEE450056A54E /* ic_map_location.png */,
+				5D25E5321B201B4D00847505 /* ic_engen_pins.png */,
+			);
+			name = GekoMap;
+			sourceTree = "<group>";
+		};
+		5D6CCF4F1B09A54A00C3472B = {
+			isa = PBXGroup;
+			children = (
+				5D42FCA41B0DFFB400288D63 /* MapKit.framework */,
+				5D6CCF5A1B09A54A00C3472B /* GEKO */,
+				5D6CCF741B09A54A00C3472B /* GEKOTests */,
+				5D6CCF591B09A54A00C3472B /* Products */,
+				35EDD8D8636FA73F8A4AE43B /* Pods */,
+				7FCED5A94BAAFE26B2918648 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D6CCF591B09A54A00C3472B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF581B09A54A00C3472B /* GEKO.app */,
+				5D6CCF711B09A54A00C3472B /* GEKOTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D6CCF5A1B09A54A00C3472B /* GEKO */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF871B09A66000C3472B /* Resources */,
+				5D6CCF861B09A63A00C3472B /* Controller */,
+				5D6CCF851B09A63600C3472B /* View */,
+				5D6CCF841B09A63100C3472B /* Model */,
+				5D6CCF831B09A62300C3472B /* AppDelegate */,
+				5D6CCF681B09A54A00C3472B /* Images.xcassets */,
+				5D6CCF5B1B09A54A00C3472B /* Supporting Files */,
+			);
+			path = GEKO;
+			sourceTree = "<group>";
+		};
+		5D6CCF5B1B09A54A00C3472B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF811B09A5EB00C3472B /* PrefixHeader.pch */,
+				5D6CCF5C1B09A54A00C3472B /* Info.plist */,
+				5D6CCF5D1B09A54A00C3472B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D6CCF741B09A54A00C3472B /* GEKOTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF771B09A54A00C3472B /* GEKOTests.m */,
+				5D6CCF751B09A54A00C3472B /* Supporting Files */,
+			);
+			path = GEKOTests;
+			sourceTree = "<group>";
+		};
+		5D6CCF751B09A54A00C3472B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF761B09A54A00C3472B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D6CCF831B09A62300C3472B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF5F1B09A54A00C3472B /* AppDelegate.h */,
+				5D6CCF601B09A54A00C3472B /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5D6CCF841B09A63100C3472B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5D6CCF851B09A63600C3472B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF651B09A54A00C3472B /* Main.storyboard */,
+				5D6CCF6A1B09A54A00C3472B /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5D6CCF861B09A63A00C3472B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D409A8F1B16D86B0044DD8A /* GekoSetting */,
+				5D6FFB421B0EF4990056A54E /* GekoProfile */,
+				5D42FC9F1B0DFC1500288D63 /* GekoMap */,
+				5D42FC841B0D97A200288D63 /* GekoShop */,
+				5D6CCFCA1B0A182E00C3472B /* GekoPaiement */,
+				5D6CCF991B09B59100C3472B /* Menu */,
+				5D6CCF981B09B58400C3472B /* Connection */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5D6CCF871B09A66000C3472B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DEC9BE01B2708EB00B67A7A /* GekoAPI */,
+				5DEC9BD31B27021F00B67A7A /* jaalee */,
+				5D6CCFD51B0A274300C3472B /* json */,
+				5D6CCF881B09A66A00C3472B /* Images */,
+				5D6CCF821B09A60000C3472B /* Variables.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5D6CCF881B09A66A00C3472B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5DF27DB11B1C1DB40046EC49 /* bc_general_font.png */,
+				5DECC29B1B25CFAE005F1410 /* navbar */,
+				5D6FFB461B0EF8BD0056A54E /* GekoProfile */,
+				5D42FCA31B0DFC2800288D63 /* GekoMap */,
+				5D42FC8B1B0D9A5B00288D63 /* GekoShop */,
+				5D6CCFD01B0A1C7F00C3472B /* GekoPaiement */,
+				5D6CCFA11B09BECD00C3472B /* Menu */,
+				5D6CCFA01B09BEB800C3472B /* Connection */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		5D6CCF981B09B58400C3472B /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF891B09A70400C3472B /* ConnectionViewController.h */,
+				5D6CCF8A1B09A70400C3472B /* ConnectionViewController.m */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		5D6CCF991B09B59100C3472B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF9A1B09B59F00C3472B /* MenuViewController.h */,
+				5D6CCF9B1B09B59F00C3472B /* MenuViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		5D6CCFA01B09BEB800C3472B /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				5D6CCF941B09B12F00C3472B /* ic_home_pass.png */,
+				5D6CCF951B09B12F00C3472B /* ic_home_user.png */,
+				5D1E9B511B1424F700725D79 /* bc_connection_logo.png */,
+				5DF27DAF1B1C1C030046EC49 /* bc_connection_font.png */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		5D6CCFA11B09BECD00C3472B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5D7897E11B1C9FB200CE5B8A /* ic_logo_tiger_gray.png */,
+				5D1E9B531B14253100725D79 /* bc_menu_logo.png */,
+				5DFD53271B215FE2008C1B11 /* logo_geko_stroke.png */,
+				5DACB68E1B1D653D0023565D /* ic_menu_event_custom.png */,
+				5DACB68F1B1D653D0023565D /* ic_menu_gas_custom.png */,
+				5DACB6901B1D653D0023565D /* ic_menu_magasin_custom.png */,
+				5DACB6911B1D653D0023565D /* ic_menu_map_custom.png */,
+				5DACB6921B1D653D0023565D /* ic_menu_profile_custom.png */,
+				5DACB6931B1D653D0023565D /* ic_menu_setting_custom.png */,
+				5D9F1F2B1B1D6AB5002D4A7A /* ic_menu_event_clear.png */,
+				5D9F1F2C1B1D6AB5002D4A7A /* ic_menu_gas_clear.png */,
+				5D9F1F2D1B1D6AB5002D4A7A /* ic_menu_magasin_clear.png */,
+				5D9F1F2E1B1D6AB5002D4A7A /* ic_menu_map_clear.png */,
+				5D9F1F2F1B1D6AB5002D4A7A /* ic_menu_profile_clear.png */,
+				5D9F1F301B1D6AB5002D4A7A /* ic_menu_setting_clear.png */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		5D6CCFCA1B0A182E00C3472B /* GekoPaiement */ = {
+			isa = PBXGroup;
+			children = (
+				5D3F23CF1B36B3A800D0FD15 /* Transaction */,
+				5D6CCFCB1B0A184200C3472B /* GekoPaiementViewController.h */,
+				5D6CCFCC1B0A184200C3472B /* GekoPaiementViewController.m */,
+				5D3F23D01B36B73800D0FD15 /* GekoPaiementTableViewCell.h */,
+				5D3F23D11B36B73800D0FD15 /* GekoPaiementTableViewCell.m */,
+			);
+			name = GekoPaiement;
+			sourceTree = "<group>";
+		};
+		5D6CCFD01B0A1C7F00C3472B /* GekoPaiement */ = {
+			isa = PBXGroup;
+			children = (
+				5D1D15351B3A639300F0988D /* Transaction */,
+				5DA743EF1B2CA99500060C71 /* Categories */,
+				5D2E1F491B0B466B00CAF30A /* Station */,
+				5D7A87921B0B0D2C008BD86A /* ic_paiement_next.png */,
+				5D1E9B551B14259900725D79 /* station4.jpg */,
+				5D1E9B561B14259900725D79 /* station2.jpg */,
+				5D1E9B571B14259900725D79 /* station3.jpg */,
+				5D1E9B581B14259900725D79 /* station1.png */,
+				5DCC79571B26B438001803AA /* bc_illust_stations.jpg */,
+				5DCC79591B26BA22001803AA /* bc_illust_bbe.jpg */,
+				5DCC795A1B26BA22001803AA /* bc_illust_bricolage.jpg */,
+				5DCC795B1B26BA22001803AA /* bc_illust_mode.jpg */,
+				5DCC795C1B26BA22001803AA /* bc_illust_ra.jpg */,
+				5DCC795D1B26BA22001803AA /* bc_illust_services.jpg */,
+				5DCC795E1B26BA22001803AA /* bc_illust_slv.jpg */,
+				5DCC795F1B26BA22001803AA /* bc_illust_supermarche.jpg */,
+				5DCC79671B26CC2C001803AA /* slv1.jpg */,
+			);
+			name = GekoPaiement;
+			sourceTree = "<group>";
+		};
+		5D6CCFD51B0A274300C3472B /* json */ = {
+			isa = PBXGroup;
+			children = (
+				5D25E52E1B20166200847505 /* gps.json */,
+				5D42FC8F1B0DA64F00288D63 /* shop.json */,
+				5DECC2991B25AE37005F1410 /* stations.json */,
+			);
+			name = json;
+			sourceTree = "<group>";
+		};
+		5D6FFB421B0EF4990056A54E /* GekoProfile */ = {
+			isa = PBXGroup;
+			children = (
+				5D6FFB431B0EF5040056A54E /* GekoProfileViewController.h */,
+				5D6FFB441B0EF5040056A54E /* GekoProfileViewController.m */,
+			);
+			name = GekoProfile;
+			sourceTree = "<group>";
+		};
+		5D6FFB461B0EF8BD0056A54E /* GekoProfile */ = {
+			isa = PBXGroup;
+			children = (
+				5D6FFB491B0EFB1C0056A54E /* ic_profile_pic.jpg */,
+				5D9F1F371B1D7588002D4A7A /* bc_profile_font.png */,
+			);
+			name = GekoProfile;
+			sourceTree = "<group>";
+		};
+		5DA743EF1B2CA99500060C71 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5DA743F01B2CA9A200060C71 /* ic_paiement_1_white.png */,
+				5DA743F11B2CA9A200060C71 /* ic_paiement_2_white.png */,
+				5DA743F21B2CA9A200060C71 /* ic_paiement_3_white.png */,
+				5DA743F31B2CA9A200060C71 /* ic_paiement_4_white.png */,
+				5DA743F41B2CA9A200060C71 /* ic_paiement_5_white.png */,
+				5DA743F51B2CA9A200060C71 /* ic_paiement_6_white.png */,
+				5DA743F61B2CA9A200060C71 /* ic_paiement_7_white.png */,
+				5DA743FE1B2CB25F00060C71 /* ic_paiement_8_white.png */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		5DEC9BD31B27021F00B67A7A /* jaalee */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = jaalee;
+			sourceTree = "<group>";
+		};
+		5DEC9BE01B2708EB00B67A7A /* GekoAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5DCC79691B26E849001803AA /* GekoAPI.h */,
+				5DCC796A1B26E849001803AA /* GekoAPI.m */,
+			);
+			name = GekoAPI;
+			sourceTree = "<group>";
+		};
+		5DECC29B1B25CFAE005F1410 /* navbar */ = {
+			isa = PBXGroup;
+			children = (
+				5DFD532D1B21AEBD008C1B11 /* ic_back_white.png */,
+				5DECC29C1B25CFBA005F1410 /* ic_navbar_menu_white.png */,
+			);
+			name = navbar;
+			sourceTree = "<group>";
+		};
+		7FCED5A94BAAFE26B2918648 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DD667F31B419EB10068B88C /* libsqlite3.dylib */,
+				54459E14EF5E0137AE124BCF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D6CCF571B09A54A00C3472B /* GEKO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D6CCF7B1B09A54A00C3472B /* Build configuration list for PBXNativeTarget "GEKO" */;
+			buildPhases = (
+				3EC06CA7EB9A523CF0111C7E /* Check Pods Manifest.lock */,
+				5D6CCF541B09A54A00C3472B /* Sources */,
+				5D6CCF551B09A54A00C3472B /* Frameworks */,
+				5D6CCF561B09A54A00C3472B /* Resources */,
+				4FFEC24E832A7E2AC3722483 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GEKO;
+			productName = GEKO;
+			productReference = 5D6CCF581B09A54A00C3472B /* GEKO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D6CCF701B09A54A00C3472B /* GEKOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D6CCF7E1B09A54A00C3472B /* Build configuration list for PBXNativeTarget "GEKOTests" */;
+			buildPhases = (
+				5D6CCF6D1B09A54A00C3472B /* Sources */,
+				5D6CCF6E1B09A54A00C3472B /* Frameworks */,
+				5D6CCF6F1B09A54A00C3472B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D6CCF731B09A54A00C3472B /* PBXTargetDependency */,
+			);
+			name = GEKOTests;
+			productName = GEKOTests;
+			productReference = 5D6CCF711B09A54A00C3472B /* GEKOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D6CCF501B09A54A00C3472B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = eGokia;
+				TargetAttributes = {
+					5D6CCF571B09A54A00C3472B = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = E5P894ED53;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					5D6CCF701B09A54A00C3472B = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 5D6CCF571B09A54A00C3472B;
+					};
+				};
+			};
+			buildConfigurationList = 5D6CCF531B09A54A00C3472B /* Build configuration list for PBXProject "GEKO" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D6CCF4F1B09A54A00C3472B;
+			productRefGroup = 5D6CCF591B09A54A00C3472B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D6CCF571B09A54A00C3472B /* GEKO */,
+				5D6CCF701B09A54A00C3472B /* GEKOTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D6CCF561B09A54A00C3472B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DECC29A1B25AE37005F1410 /* stations.json in Resources */,
+				5DA743FF1B2CB25F00060C71 /* ic_paiement_8_white.png in Resources */,
+				5D2E1F511B0B467400CAF30A /* ic_station_mobile_pay_white.png in Resources */,
+				5DACB6961B1D653D0023565D /* ic_menu_magasin_custom.png in Resources */,
+				5D2E1F5A1B0B4D1900CAF30A /* ic_station_star_black.png.png in Resources */,
+				5DECC29D1B25CFBA005F1410 /* ic_navbar_menu_white.png in Resources */,
+				5D9F1F311B1D6AB5002D4A7A /* ic_menu_event_clear.png in Resources */,
+				5D2E1F531B0B467400CAF30A /* ic_station_card_pay_white.png in Resources */,
+				5DCC79681B26CC2C001803AA /* slv1.jpg in Resources */,
+				5DA743FB1B2CA9A200060C71 /* ic_paiement_5_white.png in Resources */,
+				5D2E1F651B0B5D2700CAF30A /* ic_station_mobile_pay_gray.png in Resources */,
+				5DACB6981B1D653D0023565D /* ic_menu_profile_custom.png in Resources */,
+				5D2E1F521B0B467400CAF30A /* ic_station_mobile_pay_blue.png in Resources */,
+				5D25E52F1B20166200847505 /* gps.json in Resources */,
+				5D1D15371B3A64C800F0988D /* ic_next_white.png in Resources */,
+				5D9F1F321B1D6AB5002D4A7A /* ic_menu_gas_clear.png in Resources */,
+				5D9F1F331B1D6AB5002D4A7A /* ic_menu_magasin_clear.png in Resources */,
+				5DCC79651B26BA22001803AA /* bc_illust_slv.jpg in Resources */,
+				5DACB6951B1D653D0023565D /* ic_menu_gas_custom.png in Resources */,
+				5DFD53281B215FE2008C1B11 /* logo_geko_stroke.png in Resources */,
+				5DCC79641B26BA22001803AA /* bc_illust_services.jpg in Resources */,
+				5D7897E21B1C9FB200CE5B8A /* ic_logo_tiger_gray.png in Resources */,
+				5D42FC901B0DA64F00288D63 /* shop.json in Resources */,
+				5D2E1F5E1B0B58AB00CAF30A /* ic_station_tick_green.png in Resources */,
+				5D6FFB4A1B0EFB1C0056A54E /* ic_profile_pic.jpg in Resources */,
+				5DACB6971B1D653D0023565D /* ic_menu_map_custom.png in Resources */,
+				5DA743FD1B2CA9A200060C71 /* ic_paiement_7_white.png in Resources */,
+				5D9F1F361B1D6AB5002D4A7A /* ic_menu_setting_clear.png in Resources */,
+				5D2E1F591B0B4D1900CAF30A /* ic_station_star_blue.png in Resources */,
+				5DA743F81B2CA9A200060C71 /* ic_paiement_2_white.png in Resources */,
+				5D2E1F501B0B467400CAF30A /* ic_station_card_pay_blue.png in Resources */,
+				5DACB6991B1D653D0023565D /* ic_menu_setting_custom.png in Resources */,
+				5D1E9B5C1B14259900725D79 /* station1.png in Resources */,
+				5D1E9B591B14259900725D79 /* station4.jpg in Resources */,
+				5D6CCF671B09A54A00C3472B /* Main.storyboard in Resources */,
+				5D1E9B521B1424F700725D79 /* bc_connection_logo.png in Resources */,
+				5DCC79661B26BA22001803AA /* bc_illust_supermarche.jpg in Resources */,
+				5D1E9B541B14253100725D79 /* bc_menu_logo.png in Resources */,
+				5D2E1F5F1B0B58AB00CAF30A /* ic_station_tick_gray.png in Resources */,
+				5DA743FA1B2CA9A200060C71 /* ic_paiement_4_white.png in Resources */,
+				5D6FFB411B0EEE450056A54E /* ic_map_location.png in Resources */,
+				5D1E9B5B1B14259900725D79 /* station3.jpg in Resources */,
+				5DFD532E1B21AEBD008C1B11 /* ic_back_white.png in Resources */,
+				5D2E1F541B0B467400CAF30A /* ic_station_mobile_pay_black.png in Resources */,
+				5DA743FC1B2CA9A200060C71 /* ic_paiement_6_white.png in Resources */,
+				5D6CCF6C1B09A54A00C3472B /* LaunchScreen.xib in Resources */,
+				5D25E5331B201B4D00847505 /* ic_engen_pins.png in Resources */,
+				5D6CCF971B09B12F00C3472B /* ic_home_user.png in Resources */,
+				5DA743F71B2CA9A200060C71 /* ic_paiement_1_white.png in Resources */,
+				5DA433EB1B0C48DF00A78747 /* ic_station_logo_station.png in Resources */,
+				5DCC79581B26B438001803AA /* bc_illust_stations.jpg in Resources */,
+				5DF27DB01B1C1C030046EC49 /* bc_connection_font.png in Resources */,
+				5D6CCF691B09A54A00C3472B /* Images.xcassets in Resources */,
+				5DCC79621B26BA22001803AA /* bc_illust_mode.jpg in Resources */,
+				5D42FC9A1B0DE6FA00288D63 /* ic_shop_default_item.png in Resources */,
+				5D2E1F641B0B5D2700CAF30A /* ic_station_card_pay_gray.png in Resources */,
+				5DA743F91B2CA9A200060C71 /* ic_paiement_3_white.png in Resources */,
+				5DCC79631B26BA22001803AA /* bc_illust_ra.jpg in Resources */,
+				5DCC79601B26BA22001803AA /* bc_illust_bbe.jpg in Resources */,
+				5DF27DB21B1C1DB40046EC49 /* bc_general_font.png in Resources */,
+				5D2E1F551B0B467400CAF30A /* ic_station_card_pay_black.png in Resources */,
+				5D2E1F5B1B0B4D1900CAF30A /* ic_station_star_white.png in Resources */,
+				5DACB6941B1D653D0023565D /* ic_menu_event_custom.png in Resources */,
+				5D9F1F341B1D6AB5002D4A7A /* ic_menu_map_clear.png in Resources */,
+				5D2E1F611B0B597500CAF30A /* ic_station_tick_blue.png in Resources */,
+				5D9F1F381B1D7588002D4A7A /* bc_profile_font.png in Resources */,
+				5D7A87931B0B0D2C008BD86A /* ic_paiement_next.png in Resources */,
+				5D6CCF961B09B12F00C3472B /* ic_home_pass.png in Resources */,
+				5D9F1F351B1D6AB5002D4A7A /* ic_menu_profile_clear.png in Resources */,
+				5DCC79611B26BA22001803AA /* bc_illust_bricolage.jpg in Resources */,
+				5D1E9B5A1B14259900725D79 /* station2.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D6CCF6F1B09A54A00C3472B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EC06CA7EB9A523CF0111C7E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4FFEC24E832A7E2AC3722483 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D6CCF541B09A54A00C3472B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D6CCF8B1B09A70400C3472B /* ConnectionViewController.m in Sources */,
+				5D42FCA81B0E081800288D63 /* MyLocation.m in Sources */,
+				5D3F23D21B36B73800D0FD15 /* GekoPaiementTableViewCell.m in Sources */,
+				5DCC796B1B26E849001803AA /* GekoAPI.m in Sources */,
+				5D42FCA21B0DFC2200288D63 /* GekoMapViewController.m in Sources */,
+				5D42FC9E1B0DEA7D00288D63 /* GekoShopDescriptionViewController.m in Sources */,
+				5D3F23CE1B36B3A200D0FD15 /* GekoTransactionViewController.m in Sources */,
+				5D6CCF611B09A54A00C3472B /* AppDelegate.m in Sources */,
+				5D6CCF5E1B09A54A00C3472B /* main.m in Sources */,
+				5D409A921B16D8820044DD8A /* GekoSettingViewController.m in Sources */,
+				5D6CCF9C1B09B59F00C3472B /* MenuViewController.m in Sources */,
+				5D6FFB451B0EF5040056A54E /* GekoProfileViewController.m in Sources */,
+				5D42FC8A1B0D97D500288D63 /* GekoShopViewController.m in Sources */,
+				5D42FC981B0DDF0C00288D63 /* GekoShopCollectionViewCell.m in Sources */,
+				5D6CCFCD1B0A184200C3472B /* GekoPaiementViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D6CCF6D1B09A54A00C3472B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D6CCF781B09A54A00C3472B /* GEKOTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D6CCF731B09A54A00C3472B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D6CCF571B09A54A00C3472B /* GEKO */;
+			targetProxy = 5D6CCF721B09A54A00C3472B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5D6CCF651B09A54A00C3472B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D6CCF661B09A54A00C3472B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D6CCF6A1B09A54A00C3472B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D6CCF6B1B09A54A00C3472B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D6CCF791B09A54A00C3472B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5D6CCF7A1B09A54A00C3472B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D6CCF7C1B09A54A00C3472B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6304FC02E4D6C33BBE7CCCA2 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = GEKO/PrefixHeader.pch;
+				INFOPLIST_FILE = GEKO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GEKO/SDK",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5D6CCF7D1B09A54A00C3472B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8C5F9A858B46839C42B8BC1 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = GEKO/PrefixHeader.pch;
+				INFOPLIST_FILE = GEKO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GEKO/SDK",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5D6CCF7F1B09A54A00C3472B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GEKOTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEKO.app/GEKO";
+			};
+			name = Debug;
+		};
+		5D6CCF801B09A54A00C3472B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GEKOTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEKO.app/GEKO";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D6CCF531B09A54A00C3472B /* Build configuration list for PBXProject "GEKO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D6CCF791B09A54A00C3472B /* Debug */,
+				5D6CCF7A1B09A54A00C3472B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D6CCF7B1B09A54A00C3472B /* Build configuration list for PBXNativeTarget "GEKO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D6CCF7C1B09A54A00C3472B /* Debug */,
+				5D6CCF7D1B09A54A00C3472B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D6CCF7E1B09A54A00C3472B /* Build configuration list for PBXNativeTarget "GEKOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D6CCF7F1B09A54A00C3472B /* Debug */,
+				5D6CCF801B09A54A00C3472B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D6CCF501B09A54A00C3472B /* Project object */;
+}

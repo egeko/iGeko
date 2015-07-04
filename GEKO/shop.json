@@ -1,0 +1,112 @@
+[
+	{
+		"categorie" : "cat1",
+		"articles" : 
+		[
+			{
+				"nom" : "article 1",
+				"available" : 1,
+				"stock" : 20,
+				"description" : "description article 1",
+				"prix monnaie" : 20,
+				"prix point" : 100,
+				"illustration" : "http://lien.illustration.com",
+				"discount" : 0
+			},
+			{
+				"nom" : "article 2",
+				"available" : 0,
+				"stock" : 67,
+				"description" : "description article 2",
+				"prix monnaie" : 10,
+				"prix point" : 75,
+				"illustration" : "http://lien.illustration.com",
+				"discount" : 0
+			}
+		]
+	},
+	{
+		"categorie" : "cat2",
+		"articles" : 
+		[
+			{
+				"nom" : "article 3",
+				"available" : 1,
+				"stock" : 5,
+				"description" : "description article 3",
+				"prix monnaie" : 20,
+				"prix point" : 100,
+				"illustration" : "http://lien.illustration.com",
+				"discount" : 0
+			}
+		]
+	},
+	{
+		"categorie" : "cat3",
+		"articles" : 
+		[
+			{
+				"nom" : "article 4",
+				"available" : 1,
+				"stock" : 20,
+				"description" : "description article 4",
+				"prix monnaie" : 20,
+				"prix point" : 100,
+				"illustration" : "http://lien.illustration.com",
+				"discount" : 0
+			},
+			{
+				"nom" : "article 5",
+				"available" : 0,
+				"stock" : 67,
+				"description" : "description article 5",
+				"prix monnaie" : 10,
+				"prix point" : 75,
+				"illustration" : "http://lien.illustration.com",
+				"discount" : 0
+			}
+		]
+	},
+	{
+		"categorie" : "cat4",
+		"articles" : 
+		[
+			{
+				"nom" : "article 6",
+				"available" : 1,
+				"stock" : 20,
+				"description" : "description article 6",
+				"prix monnaie" : 20,
+				"prix point" : 100,
+				"illustration" : "http://lien.illustration.com",
+				"discount" : 0
+			},
+			{
+				"nom" : "article 7",
+				"available" : 0,
+				"stock" : 67,
+				"description" : "description article 7",
+				"prix monnaie" : 10,
+				"prix point" : 75,
+				"illustration" : "http://lien.illustration.com",
+				"discount" : 1
+			}
+		]
+	},
+	{
+		"categorie" : "cat5",
+		"articles" : 
+		[
+			{
+				"nom" : "article 8",
+				"available" : 0,
+				"stock" : 20,
+				"description" : "description article 8",
+				"prix monnaie" : 20,
+				"prix point" : 100,
+				"illustration" : "http://lien.illustration.com",
+				"discount" : 0
+			}
+		]
+	}
+]

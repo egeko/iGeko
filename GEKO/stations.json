@@ -1,0 +1,1717 @@
+[
+      {
+            "type" : "stations",
+            "liste" : [
+                  {
+                        "nom" : "EST",
+                        "stations" : 
+                        [
+                              {
+                                    "id":1,
+                                    "Secteur":"EST",
+                                    "SiteName":"ENGEN Bras Fusil",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Poui Di Jean-Michel",
+                                    "Street Address":"SARL JMMA - 11, RN3 - Bras Fusil",
+                                    "CP":"97470 St Benoit",
+                                    "Phone Number":"0262 47 24 68",
+                                    "Mobile (06 92)":"0692 77 84 64",
+                                    "FAX (02 62)":"47.31.29",
+                                    "Mail":"pouidi.jm@wanadoo.fr jerry.savaranin@orange.fr",
+                                    "lat":-21.048481,
+                                    "long":55.714606,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {
+                                    "id":2,
+                                    "Secteur":"EST",
+                                    "SiteName":"ENGEN St Andre Ville",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Mamodaly jivan",
+                                    "Street Address":"306, Avenue Bourbon",
+                                    "CP":"97440 St Andre",
+                                    "Phone Number":"0262 46 62 65",
+                                    "Mobile (06 92)":"0692 64 16 18",
+                                    "FAX (02 62)":"58.25.93",
+                                    "Mail":"moustapha.mamodaly@wanadoo.fr",
+                                    "lat":-20.9719281,
+                                    "long":55.6473919,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {
+                                    "id":3,
+                                    "Secteur":"EST",
+                                    "SiteName":"ENGEN Cocoteraie",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Jean Luc Savaranin",
+                                    "Street Address":"611 rue de la communaute",
+                                    "CP":"97440 St Andre",
+                                    "Phone Number":"0262 58 28 05",
+                                    "Mobile (06 92)":"0692 60 84 32",
+                                    "FAX (02 62)":"46.53.86",
+                                    "Mail":"s1.sav@wanadoo.fr",
+                                    "lat":-20.9643285,
+                                    "long":55.6558093,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {
+                                    "id":4,
+                                    "Secteur":"EST",
+                                    "SiteName":"ENGEN Champborne",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Louis Paquiry",
+                                    "Street Address":"1060, Rue Cambuston",
+                                    "CP":"97440 St Andre",
+                                    "Phone Number":"0262 58 38 42",
+                                    "Mobile (06 92)":"0692 46 84 21",
+                                    "FAX (02 62)":"21.03.26",
+                                    "Mail":"vpaquiry@hotmail.com",
+                                    "lat":-20.9331993,
+                                    "long":55.6530919,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              }
+                        ]
+                  },
+                  {
+                        "nom" : "OUEST",
+                        "stations" : 
+                        [
+                              {     
+                                    "id":5,
+                                    "Secteur":"OUEST",
+                                    "SiteName":"ENGEN  S G N",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Nazir Issoufaly",
+                                    "Street Address":"96, Rue Mahatma Gandhy",
+                                    "CP":"97419 La Possession",
+                                    "Phone Number":"0262 22 19 02",
+                                    "Mobile (06 92)":"0692 65 93 66",
+                                    "FAX (02 62)":"22.14.00",
+                                    "Mail":"caltex@wanadoo.fr",
+                                    "lat":-20.9589251,
+                                    "long":55.3221212,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":5,
+                                    "Secteur":"OUEST",
+                                    "SiteName":"ENGEN Oasis",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Claude Payet",
+                                    "Street Address":"Angles Rues Charles de Gaulle & Carpaye - BP 276",
+                                    "CP":"97828 Le Port",
+                                    "Phone Number":"0262 43 84 14",
+                                    "Mobile (06 92)":"0692 23 88 40",
+                                    "FAX (02 62)":"43.91.89",
+                                    "Mail":"caltex.oasis@wanadoo.fr",
+                                    "lat":-20.9456856,
+                                    "long":55.295055,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":6,
+                                    "Secteur":"OUEST",
+                                    "SiteName":"ENGEN 3 Chemins",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Gerard Lebon",
+                                    "Street Address":"Rue Frederic Payet - RD4 La Plaine",
+                                    "CP":"97460 St Paul",
+                                    "Phone Number":"0262 44 53 35",
+                                    "Mobile (06 92)":"0692 27 22 72",
+                                    "FAX (02 62)":"44 51 69",
+                                    "Mail":"gerardlebon@orange.fr",
+                                    "lat":-20.9793686,
+                                    "long":55.3184037,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":7,
+                                    "Secteur":"OUEST",
+                                    "SiteName":"ENGEN Riviere Des Galets",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mme Benjamine Ancelly",
+                                    "Street Address":"48 bis, Rue Nelson Mandela - Rivire des Galets",
+                                    "CP":"97419 La Possession",
+                                    "Phone Number":"0262 02 00 87",
+                                    "Mobile (06 92)":"0692 86 60 81",
+                                    "FAX (02 62)":"",
+                                    "Mail":"",
+                                    "lat":-20.9646781,
+                                    "long":55.3280513,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":8,
+                                    "Secteur":"OUEST",
+                                    "SiteName":"ENGEN Guillaume",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Gerard Lebon",
+                                    "Street Address":"7, Route du Maido",
+                                    "CP":"97423 Le Guillaume",
+                                    "Phone Number":"0262 32 50 60",
+                                    "Mobile (06 92)":"0692 27 22 72",
+                                    "FAX (02 62)":"32 59 48",
+                                    "Mail":"",
+                                    "lat":-21.0361997,
+                                    "long":55.308675,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":9,
+                                    "Secteur":"OUEST",
+                                    "SiteName":"ENGEN Avirons",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Pascal Liang Has",
+                                    "Street Address":"82, Avenue du General de Gaulle",
+                                    "CP":"97425 Les Avirons",
+                                    "Phone Number":"0262 38 01 52",
+                                    "Mobile (06 92)":"0692 85 70 87",
+                                    "FAX (02 62)":"38.03.28",
+                                    "Mail":"lianghas@wanadoo.fr",
+                                    "lat":-21.1087025,
+                                    "long":55.299226,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":10,
+                                    "Secteur":"OUEST",
+                                    "SiteName":"ENGEN Lagon",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr Robert LAN NAN FANG",
+                                    "Street Address":"Lot. Les Sables Blonds",
+                                    "CP":"97434 St Gilles Les Bains",
+                                    "Phone Number":"0262 33 82 88",
+                                    "Mobile (06 92)":"0692 60 80 06",
+                                    "FAX (02 62)":"33.83.17",
+                                    "Mail":"remy.lnf@wanadoo.fr",
+                                    "lat":-21.0492971,
+                                    "long":55.226141,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {
+                                    "id":11,
+                                    "Secteur":"OUEST",
+                                    "SiteName":"ENGEN Eperon",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Sylvestre Valin",
+                                    "Street Address":"",
+                                    "CP":"",
+                                    "Phone Number":"",
+                                    "Mobile (06 92)":"",
+                                    "FAX (02 62)":"",
+                                    "Mail":"",
+                                    "lat":0,
+                                    "long":0,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              }
+                        ]
+                  },
+                  {
+                        "nom" : "SUD",
+                        "stations" : [
+                              {     
+                                    "id":12,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Ravine Blanche",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Jean Marie Lebreton",
+                                    "Street Address":"235, Rue Marius & Ary Leblond - Ravine Blanche",
+                                    "CP":"97410 St Pierre",
+                                    "Phone Number":"0262 25 15 08",
+                                    "Mobile (06 92)":"0692 85 62 63",
+                                    "FAX (02 62)":"25.62.16",
+                                    "Mail":"caltexravblanche@wanadoo.fr",
+                                    "lat":-21.0226995,
+                                    "long":55.4816222,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":13,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Tampon 400",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Frederic Benoiton",
+                                    "Street Address":"4 voies - BP 420",
+                                    "CP":"97838 Le Tampon",
+                                    "Phone Number":"0262 27 64 03",
+                                    "Mobile (06 92)":"0692 86 01 07",
+                                    "FAX (02 62)":"57.33.90",
+                                    "Mail":"eurl.benoiton@wanadoo.fr",
+                                    "lat":-21.2252035,
+                                    "long":55.5714493,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":14,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Cilaos",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Ms. Corre",
+                                    "Street Address":"Chemin des Trois Mares",
+                                    "CP":"97413 Cilaos",
+                                    "Phone Number":"0262 31 75 11",
+                                    "Mobile (06 92)":"0692 64 00 45",
+                                    "FAX (02 62)":"31.81.08",
+                                    "Mail":"station.caltex-1013@orange.fr",
+                                    "lat":-20.9190923,
+                                    "long":55.4859363,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":15,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Tampon 600",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Ibrahim Balbolia",
+                                    "Street Address":"47, Rue Vallon Hoareau",
+                                    "CP":"97430 Le Tampon",
+                                    "Phone Number":"0262 27 10 01",
+                                    "Mobile (06 92)":"0692 66 85 36",
+                                    "FAX (02 62)":"59 52 04",
+                                    "Mail":"engen.600@laposte.net",
+                                    "lat":-21.2836698,
+                                    "long":55.5180753,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":16,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Ligne Paradis",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Goulam Akbaraly",
+                                    "Street Address":"Ligne Paradis - ZI nÁ2",
+                                    "CP":"97410 St Pierre",
+                                    "Phone Number":"0262 35 55 64",
+                                    "Mobile (06 92)":"0692 22 20 22",
+                                    "FAX (02 62)":"35.07.71",
+                                    "Mail":"ds.paradis@wanadoo.fr",
+                                    "lat":-21.3052576,
+                                    "long":55.462993,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":17,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Saint Louis",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Charles Alagama",
+                                    "Street Address":"Avenue Principale",
+                                    "CP":"97450 St Louis",
+                                    "Phone Number":"0262 26 16 65",
+                                    "Mobile (06 92)":"0693 40 40 40",
+                                    "FAX (02 62)":"26 16 65",
+                                    "Mail":"alagama.charlemagne@orange.fr  garage.pilote@wanadoo.fr",
+                                    "lat":-21.2884768,
+                                    "long":55.4105016,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":18,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Riviere St Louis",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Daniel Fontaine",
+                                    "Street Address":"89, Rue Docteur Schweitzer",
+                                    "CP":"97421 Rivire St Louis",
+                                    "Phone Number":"0262 39 08 30",
+                                    "Mobile (06 92)":"",
+                                    "FAX (02 62)":"39.72.21",
+                                    "Mail":"virginiefrance@wanadoo.fr",
+                                    "lat":-21.2712219,
+                                    "long":55.44855,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":19,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Ravine Des Cabris",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Jean Claude Bello",
+                                    "Street Address":"128 CD 27 - Allee des Bois Noirs",
+                                    "CP":"97432 Ravine des Cabris",
+                                    "Phone Number":"0262 49 54 34",
+                                    "Mobile (06 92)":"0692 67 60 97",
+                                    "FAX (02 62)":"49.85.07",
+                                    "Mail":"florent.bello@izi.re",
+                                    "lat":-21.2887791,
+                                    "long":55.4562574,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":20,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Mon Caprice",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr Andinaik Nathalie",
+                                    "Street Address":"rue ligne des bambous",
+                                    "CP":"97432 Ravine des Cabris",
+                                    "Phone Number":"0262 27 11 40",
+                                    "Mobile (06 92)":"06 93 00 67 17",
+                                    "FAX (02 62)":"27.12.66",
+                                    "Mail":"caltex.ligne-bambous@orange.fr",
+                                    "lat":-21.302763,
+                                    "long":55.493657,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":21,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN St Joseph",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Robert Lefevre",
+                                    "Street Address":"429, Rue RaphaÔl Babet",
+                                    "CP":"97480 St Joseph",
+                                    "Phone Number":"0262 56 56 63",
+                                    "Mobile (06 92)":"",
+                                    "FAX (02 62)":"56.56.63",
+                                    "Mail":"dream.of.angels@hotmail.com",
+                                    "lat":0,
+                                    "long":0,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":22,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Plaine Des Cafres",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Michel Boyer",
+                                    "Street Address":"27eme KM - RN3 - Bourg Murat",
+                                    "CP":"97418 Plaine des Cafres ",
+                                    "Phone Number":"0262 59 28 24",
+                                    "Mobile (06 92)":"0692 25 60 34",
+                                    "FAX (02 62)":"59.28.25",
+                                    "Mail":"",
+                                    "lat":-21.1621066,
+                                    "long":55.5701646,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":23,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Etang Sale",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Frederic Severin",
+                                    "Street Address":"Lieu dit Les Sables RN 1",
+                                    "CP":"97427 Etang Sale",
+                                    "Phone Number":"0262 26 15 82",
+                                    "Mobile (06 92)":"0693 00 67 17",
+                                    "FAX (02 62)":"26 15 82",
+                                    "Mail":"sevrin.frederic@wanadoo.fr   stationservices.lessables@wanadoo.fr",
+                                    "lat":-21.267378,
+                                    "long":55.359443,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":24,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN Entre Deux",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. DeChantilly",
+                                    "Street Address":"6 bis, Rue du Commerce",
+                                    "CP":"97414 Entre Deux",
+                                    "Phone Number":"0262 42 46 35",
+                                    "Mobile (06 92)":"0692 85 16 95 ",
+                                    "FAX (02 62)":"42.39.98",
+                                    "Mail":"dechantillypro@hotmail.fr",
+                                    "lat":-21.2488691,
+                                    "long":55.47053,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":25,
+                                    "Secteur":"SUD",
+                                    "SiteName":"ENGEN RD 26 Allee des Cedres",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Alfred CARPY",
+                                    "Street Address":"Route de l'Entre Deux",
+                                    "CP":"97410 Saint-Pierre",
+                                    "Phone Number":"",
+                                    "Mobile (06 92)":"692697367",
+                                    "FAX (02 62)":"",
+                                    "Mail":"",
+                                    "lat":-21.2903766,
+                                    "long":55.4509519,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              }
+                        ]
+                  },
+                  {
+                        "nom" : "NORD",
+                        "stations" : [
+                              {     
+                                    "id":26,
+                                    "Secteur":"NORD",
+                                    "SiteName":"ENGEN Four A Chaux (CARCI)",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Jean Louis Grondein",
+                                    "Street Address":"Rue Four a Chaux",
+                                    "CP":"97400 St Denis",
+                                    "Phone Number":"0262 21 25 33",
+                                    "Mobile (06 92)":"0692 60 17 00",
+                                    "FAX (02 62)":"21.16.77",
+                                    "Mail":"ganeya974@hotmail.com",
+                                    "lat":-21.341633,
+                                    "long":55.4724169,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":27,
+                                    "Secteur":"NORD",
+                                    "SiteName":"ENGEN Malartic",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. JANNICK  MOULTANIN",
+                                    "Street Address":"Angles des Rues Malartic et General de Gaulle",
+                                    "CP":"97400 St Denis",
+                                    "Phone Number":"0262 20 05 93",
+                                    "Mobile (06 92)":"0692 00 54 39",
+                                    "FAX (02 62)":"20.05.93",
+                                    "Mail":"chantal.lnf@wanadoo.fr",
+                                    "lat":-20.8873544,
+                                    "long":55.4524058,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":28,
+                                    "Secteur":"NORD",
+                                    "SiteName":"ENGEN La Montagne   ",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Thierry Deheaulme",
+                                    "Street Address":"74, Route des Palmiers - PK8",
+                                    "CP":"97417 La Montagne",
+                                    "Phone Number":"0262 23 89 70",
+                                    "Mobile (06 92)":"0692 65 72 92",
+                                    "FAX (02 62)":"23.79.83",
+                                    "Mail":"thierry.deheaulme@orange.fr",
+                                    "lat":-20.8892771,
+                                    "long":55.4233425,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":29,
+                                    "Secteur":"NORD",
+                                    "SiteName":"ENGEN Chaudron",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Goulam Jaffar BANDJEE",
+                                    "Street Address":"11, Rue Roger Payet - Le Chaudron",
+                                    "CP":"97490 Ste Clotilde",
+                                    "Phone Number":"0262 28 06 03",
+                                    "Mobile (06 92)":"0692 66 42 97",
+                                    "FAX (02 62)":"29.67.12",
+                                    "Mail":"caltex.jaffar@yahoo.fr",
+                                    "lat":-21.2656036,
+                                    "long":55.333162,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":30,
+                                    "Secteur":"NORD",
+                                    "SiteName":"ENGEN Montgaillard",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Christian Nourry",
+                                    "Street Address":"18, Boulevard de la Trinite",
+                                    "CP":"97400 St Denis",
+                                    "Phone Number":"0262 30 38 20",
+                                    "Mobile (06 92)":"",
+                                    "FAX (02 62)":"30.38.20",
+                                    "Mail":"murielle.rasamimanana@orange.fr",
+                                    "lat":-20.8926948,
+                                    "long":55.4639934,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":31,
+                                    "Secteur":"NORD",
+                                    "SiteName":"ENGEN Grande Montee",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"en reconstruction",
+                                    "Street Address":"",
+                                    "CP":"",
+                                    "Phone Number":"",
+                                    "Mobile (06 92)":"",
+                                    "FAX (02 62)":"",
+                                    "Mail":"",
+                                    "lat":0,
+                                    "long":0,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":32,
+                                    "Secteur":"NORD",
+                                    "SiteName":"ENGEN Bois De Nefles",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Ms. Joelle Law /Mr Michel Chang On",
+                                    "Street Address":"Angles Rues Bois de Nefles & d'Apres",
+                                    "CP":"97400 St Denis",
+                                    "Phone Number":"0262 21 16 69",
+                                    "Mobile (06 92)":"0692 67 19 62",
+                                    "FAX (02 62)":"20.37.14",
+                                    "Mail":"sarl.law.chang.on@wanadoo.fr",
+                                    "lat":-20.901916,
+                                    "long":55.50205,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              },
+                              {     
+                                    "id":33,
+                                    "Secteur":"NORD",
+                                    "SiteName":"ENGEN MARLI (2000)",
+                                    "illustration" : "station1.png",
+                                    "logo" : "ic_station_logo_station.png",
+                                    "Dealer/Retailer Name":"Mr. Jean Louis Grondein",
+                                    "Street Address":"Boulevard Chaudron - RN1",
+                                    "CP":"97490 Ste Clotilde",
+                                    "Phone Number":"0262 29 33 10",
+                                    "Mobile (06 92)":"0692 60 17 00",
+                                    "FAX (02 62)":"",
+                                    "Mail":"ganeya974@hotmail.com",
+                                    "lat":-20.8956284,
+                                    "long":55.4948692,
+                                    "pompes" : 
+                                    [
+                                          {
+                                                "id" : "GK0001R",
+                                                "name" : "pompe Geko",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0002R",
+                                                "name" : "pompe 1",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0003R",
+                                                "name" : "pompe 2",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 3",
+                                                "disponibilite" : 1
+                                          },
+                                          {
+                                                "id" : "GK0004R",
+                                                "name" : "pompe 4",
+                                                "disponibilite" : 0
+                                          }
+                                    ]
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "type" : "Sport, loisir & voyage",
+            "liste" : [
+                  {
+                        "nom" : "EST",
+                        "stations" : []
+                  },
+                  {
+                        "nom" : "OUEST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "SUD",
+                        "stations" : 
+                        [
+                              {
+                                    "id":1,
+                                    "Secteur":"SUD",
+                                    "SiteName":"Decathlon Zac Canabadi",
+                                    "illustration" : "slv1.jpg",
+                                    "logo" : "ic_station_logo_slv.png",
+                                    "Dealer/Retailer Name":"Mr. Poui Di Jean-Michel",
+                                    "Street Address":"Centre Ccial Plein Sud zac Canabady, 97410 SAINT PIERRE",
+                                    "CP":"97470 St Benoit",
+                                    "Phone Number":"0262 33 10 30",
+                                    "Mobile (06 92)":"0692 77 84 64",
+                                    "FAX (02 62)":"33.14.75",
+                                    "Mail":"pouidi.jm@wanadoo.fr",
+                                    "lat":-21.329045,
+                                    "long":55.470036,
+                                    "pompes" : []
+                              }
+                        ]
+                  },
+                  {
+                        "nom" : "NORD",
+                        "stations" : 
+                        []
+                  }
+            ]
+      },
+      {
+            "type" : "Restauration & alimentation",
+            "liste" : [
+                  {
+                        "nom" : "EST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "OUEST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "SUD",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "NORD",
+                        "stations" : 
+                        []
+                  }
+            ]
+      },
+      {
+            "type" : "Beauté & bien-être",
+            "liste" : [
+                  {
+                        "nom" : "EST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "OUEST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "SUD",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "NORD",
+                        "stations" : 
+                        []
+                  }
+            ]
+      },
+      {
+            "type" : "Bricolage",
+            "liste" : [
+                  {
+                        "nom" : "EST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "OUEST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "SUD",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "NORD",
+                        "stations" : 
+                        []
+                  }
+            ]
+      },
+      {
+            "type" : "Mode",
+            "liste" : [
+                  {
+                        "nom" : "EST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "OUEST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "SUD",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "NORD",
+                        "stations" : 
+                        []
+                  }
+            ]
+      },
+      {
+            "type" : "Supermarché",
+            "liste" : [
+                  {
+                        "nom" : "EST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "OUEST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "SUD",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "NORD",
+                        "stations" : 
+                        []
+                  }
+            ]
+      },
+      {
+            "type" : "Services",
+            "liste" : [
+                  {
+                        "nom" : "EST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "OUEST",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "SUD",
+                        "stations" : 
+                        []
+                  },
+                  {
+                        "nom" : "NORD",
+                        "stations" : 
+                        []
+                  }
+            ]
+      }
+]
