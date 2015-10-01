@@ -11,7 +11,8 @@
 
 @interface MyLocation : NSObject<MKAnnotation>
 
-- (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate;
+- (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate typepic:(NSString *)typepic cat:(int)cat;
 - (MKMapItem*)mapItem;
+- (NSString *)getType;
 
 @end

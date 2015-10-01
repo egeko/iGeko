@@ -631,12 +631,12 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	}
 
 	// Set background rect color
-	if (self.color) {
-		CGContextSetFillColorWithColor(context, self.color.CGColor);
-	} else {
-		CGContextSetGrayFillColor(context, 0.0f, self.opacity);
-	}
-
+//	if (self.color) {
+//		CGContextSetFillColorWithColor(context, self.color.CGColor);
+//	} else {
+//		CGContextSetGrayFillColor(context, 0.0f, self.opacity);
+//	}
+    CGContextSetFillColorWithColor(context, [UIColor clearColor].CGColor);
 	
 	// Center HUD
 	CGRect allRect = self.bounds;

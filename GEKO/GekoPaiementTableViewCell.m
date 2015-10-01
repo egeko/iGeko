@@ -32,7 +32,7 @@
     if (self) {
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.backgroundColor = [UIColor colorWithRed:80/255.0f green:80/255.0f blue:80/255.0f alpha:1.0f];
+        self.backgroundColor = [UIColor clearColor];
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, SWIDTH / 4 - 10, 70)];
         imageView.image = illustration;
@@ -40,7 +40,7 @@
         [self addSubview:imageView];
         
         UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(SWIDTH / 4 + 10, 5, SWIDTH / 4 * 3 - 20, 20)];
-        nameLabel.textColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
+        nameLabel.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
         nameLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:13];
         nameLabel.text = name;
         

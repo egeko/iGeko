@@ -26,18 +26,15 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - MBProgressHUD (0.9.1)
-  - MMMaterialDesignSpinner (0.2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - FMDB
   - MBProgressHUD (~> 0.9.1)
-  - MMMaterialDesignSpinner
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MMMaterialDesignSpinner: 8f1a50270b789c76ec500957e518fc3e05e55b9d
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.38.2

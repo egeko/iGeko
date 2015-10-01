@@ -10,7 +10,12 @@
 
 #import "MenuViewController.h"
 
-@interface ConnectionViewController ()
+static NSString * const kIdentifier = @"jaalee.Example";
+
+@interface ConnectionViewController ()<JLEBeaconManagerDelegate>
+
+@property (nonatomic, strong) JLEBeaconManager  *beaconManager;
+@property (nonatomic, strong) JLEBeaconRegion  *beaconRegion;
 
 @end
 
@@ -46,7 +51,7 @@
     
     /** Background **/
     UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SWIDTH, SHEIGHT)];
-    background.image = [UIImage imageNamed:@"bc_connection_font.png"];
+    background.image = [UIImage imageNamed:@"bc_connection_background2.png"];
     
     [self.view addSubview:background];
     
@@ -58,19 +63,19 @@
     
     /** Logo area **/
     UIView *whitearea = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, SWIDTH - 180)];
-    whitearea.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.1];
+    whitearea.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.0f];
     [whitearea setAlpha:0.95];
     
     [scrollView addSubview:whitearea];
     
-    UIVisualEffect *blurEffect;
-    blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    
-    UIVisualEffectView *visualEffectView;
-    visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    
-    visualEffectView.frame = whitearea.bounds;
-    [whitearea addSubview:visualEffectView];
+//    UIVisualEffect *blurEffect;
+//    blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+//    
+//    UIVisualEffectView *visualEffectView;
+//    visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+//    
+//    visualEffectView.frame = whitearea.bounds;
+//    [whitearea addSubview:visualEffectView];
     yRep += 20;
     
     /** Logo **/
@@ -84,6 +89,8 @@
     UIView *username_bc = [[UIView alloc] initWithFrame:CGRectMake(30, yRep, SWIDTH - 60, 40)];
     username_bc.backgroundColor = [UIColor whiteColor];
     [username_bc.layer setCornerRadius:8.0];
+    [username_bc.layer setBorderColor:[UIColor colorWithRed:223/250.0f green:223/250.0f blue:223/250.0f alpha:1.0f].CGColor];
+    [username_bc.layer setBorderWidth:1.0];
     
     [scrollView addSubview:username_bc];
     
@@ -103,6 +110,8 @@
     UIView *password_bc = [[UIView alloc] initWithFrame:CGRectMake(30, yRep, SWIDTH - 60, 40)];
     password_bc.backgroundColor = [UIColor whiteColor];
     [password_bc.layer setCornerRadius:8.0];
+    [password_bc.layer setBorderColor:[UIColor colorWithRed:223/250.0f green:223/250.0f blue:223/250.0f alpha:1.0f].CGColor];
+    [password_bc.layer setBorderWidth:1.0];
     
     [scrollView addSubview:password_bc];
     
@@ -124,6 +133,8 @@
     btn1.backgroundColor = [UIColor whiteColor];
     [btn1.layer setCornerRadius:8.0];
     [btn1 addTarget:self action:@selector(connectController) forControlEvents:UIControlEventTouchUpInside];
+    [btn1.layer setBorderColor:[UIColor colorWithRed:188/250.0f green:189/250.0f blue:190/250.0f alpha:1.0f].CGColor];
+    [btn1.layer setBorderWidth:1.0];
     
     [scrollView addSubview:btn1];
     
@@ -147,7 +158,11 @@
 #pragma mark - actions
 
 - (void)connectController {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ic_logo_small.png"]];
+    hud.labelText = @"Loading";
+    hud.labelColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         GekoAPI *api = [[GekoAPI alloc] initWithKeys];
         [api connectWithUserId:username.text Password:password.text AndCompletion:^(NSString *results){
@@ -161,15 +176,19 @@
                 FMDatabase *database = [FMDatabase databaseWithPath:dbPath];
                 [database open];
                 [database executeUpdate:@"DELETE FROM userInfos"];
-                [database executeUpdate:@"INSERT INTO userInfos (id, nom, prenom, carteid, password) VALUES (?, ?, ?, ?, ?)", [NSNumber numberWithInt:[[userObject objectForKey:@"id"] intValue]], [NSString stringWithFormat:@"%@", [userObject objectForKey:@"nom"]], [NSString stringWithFormat:@"%@", [userObject objectForKey:@"prenom"]], [NSString stringWithFormat:@"%@", username.text], [NSString stringWithFormat:@"%@", password.text], nil];
+                [database executeUpdate:@"INSERT INTO userInfos (id, nom, prenom, carteid, cartestatus, password) VALUES (?, ?, ?, ?, ?, ?)", [NSNumber numberWithInt:[[userObject objectForKey:@"id"] intValue]], [NSString stringWithFormat:@"%@", [userObject objectForKey:@"nom"]], [NSString stringWithFormat:@"%@", [userObject objectForKey:@"prenom"]], [NSString stringWithFormat:@"%@", username.text], [userObject objectForKey:@"status"], [NSString stringWithFormat:@"%@", password.text], nil];
                 [database close];
+                
+                username.text = @"";
+                password.text = @"";
+                [self.view endEditing:YES];
                 
                 MenuViewController *mvc = [[MenuViewController alloc] init];
                 [self.navigationController pushViewController:mvc animated:YES];
                 
             } else {
                 // server error
-                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Server error" message:[NSString stringWithFormat:@"error #%@", results] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Erreur" message:[NSString stringWithFormat:@"Erreur serveur, veuillez contacter la Geko Team."] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [av show];
             }
             [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
@@ -228,7 +247,6 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
     [textField resignFirstResponder];
     return YES;
 }

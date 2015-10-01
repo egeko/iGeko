@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tnk-Dq-GtZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yue-hT-lTw">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Connection View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <viewController id="vXZ-lx-hvc" customClass="ConnectionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="connexionview" id="vXZ-lx-hvc" customClass="ConnectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,13 +20,46 @@
                     </view>
                     <navigationItem key="navigationItem" id="EIV-to-P0r"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="271" y="494"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="OiO-xC-t1S">
+            <objects>
+                <viewController id="Yue-hT-lTw" customClass="LoadingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LO9-V7-v1c"/>
+                        <viewControllerLayoutGuide type="bottom" id="DZe-I8-qng"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gsd-jt-kMy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ttr-4P-S10">
+                                <rect key="frame" x="270" y="169" width="61" height="58"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_logo_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wqq-i4-XCT">
+                                <rect key="frame" x="266" y="235" width="69" height="32"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wqq-i4-XCT" firstAttribute="centerY" secondItem="gsd-jt-kMy" secondAttribute="centerY" constant="-49" id="J2j-ny-srT"/>
+                            <constraint firstItem="Wqq-i4-XCT" firstAttribute="top" secondItem="ttr-4P-S10" secondAttribute="bottom" constant="8" symbolic="YES" id="hmI-h5-xGw"/>
+                            <constraint firstAttribute="centerX" secondItem="ttr-4P-S10" secondAttribute="centerX" id="ivv-cA-1fC"/>
+                            <constraint firstAttribute="centerX" secondItem="Wqq-i4-XCT" secondAttribute="centerX" id="xM1-av-9rl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tx7-SB-Ldv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="-702"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hYM-tn-sQ3">
             <objects>
-                <navigationController id="Tnk-Dq-GtZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootnav" id="Tnk-Dq-GtZ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fbt-rv-xud">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,4 +73,8 @@
             <point key="canvasLocation" x="-444" y="494"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_logo.png" width="61" height="58"/>
+        <image name="ic_logo_text.png" width="69" height="32"/>
+    </resources>
 </document>

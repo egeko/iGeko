@@ -13,24 +13,56 @@
 #import "GekoMapViewController.h"
 #import "GekoProfileViewController.h"
 #import "GekoSettingViewController.h"
+#import "GekoEventViewController.h"
 
-@interface MenuViewController ()
+static NSString * const kIdentifier = @"jaalee.Example";
+
+@interface MenuViewController ()<JLEBeaconManagerDelegate>
+
+@property (nonatomic, strong) JLEBeaconManager  *beaconManager;
+@property (nonatomic, strong) JLEBeaconRegion  *beaconRegion;
 
 @end
 
 @implementation MenuViewController {
     UIScrollView *background;
+    NSArray *listEvent;
+    int minorReg;
+    int majorReg;
+    BOOL hasBeenDisplayed;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    hasBeenDisplayed = NO;
     
-    [self makeTheView];
+    self.beaconManager = [[JLEBeaconManager alloc] init];
+    self.beaconManager.delegate = self;
+    
+    self.beaconRegion = [[JLEBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"EBEFD083-70A2-47C8-9837-E7B5634DF524"] identifier:kIdentifier];
+    
+    self.beaconRegion.notifyOnEntry = YES;
+    self.beaconRegion.notifyOnExit = YES;
+    
+    [self.beaconManager startMonitoringForRegion:self.beaconRegion];
+    [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ic_logo_small.png"]];
+    hud.labelText = @"Loading";
+    hud.labelColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [self setupEnvironment];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,12 +70,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setupEnvironment {
+    self.view.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    
+    GekoAPI *api = [[GekoAPI alloc] init];
+    [api getAllBeaconEventWithCompletion:^(NSString *results){
+        if ([results isEqual:@"OK"]) {
+            listEvent = api.arrayResponse;
+        } else {
+            // server error
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Erreur" message:[NSString stringWithFormat:@"Erreur serveur, veuillez contacter la Geko Team."] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [av show];
+        }
+        [self makeTheView];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }];
+}
+
 #pragma mark - UI
 
 - (void)makeTheView {
-    self.view.backgroundColor = [UIColor colorWithRed:57/255.0f green:62/255.0f blue:68/255.0f alpha:1.0f];
-    self.automaticallyAdjustsScrollViewInsets = YES;
-    
     int yRep = 5;
     
     background = [[UIScrollView alloc] initWithFrame:CGRectMake(0, yRep, SWIDTH, SHEIGHT)];
@@ -63,27 +110,27 @@
 //    [font0 addSubview:logo];
     
     UIImageView *logo2 = [[UIImageView alloc] initWithFrame:CGRectMake(SWIDTH / 2 - (((font0.frame.size.height - 40) * 1.87) / 2), 15, (font0.frame.size.height - 40) * 1.87, font0.frame.size.height - 40)];
-    logo2.image = [UIImage imageNamed:@"logo_geko_stroke.png"];
+    logo2.image = [UIImage imageNamed:@"ic_logo_geko.png"];
     
     [font0 addSubview:logo2];
     yRep += font0.frame.size.height + 10;
     
     // Buttons
     UIView *font11 = [[UIView alloc] initWithFrame:CGRectMake(10, yRep, SWIDTH - 20, (SHEIGHT - 70) / 6)];
-    font11.backgroundColor = [UIColor colorWithRed:53/255.0f green:159/255.0f blue:219/255.0f alpha:1.0f];
+    font11.backgroundColor = [UIColor colorWithRed:210/255.0f green:214/255.0f blue:217/255.0f alpha:1.0f];
     
     [background addSubview:font11];
     
     UIImageView *pic11 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, font11.frame.size.height - 20, font11.frame.size.height - 20)];
-    pic11.image = [UIImage imageNamed:@"ic_menu_gas_custom.png"];
+    pic11.image = [UIImage imageNamed:@"ic_menu_pay.png"];
     
     [font11 addSubview:pic11];
     
     UILabel *title11 = [[UILabel alloc] initWithFrame:CGRectMake(pic11.frame.size.width + 20, font11.frame.size.height - 30, font11.frame.size.width - pic11.frame.size.width - 30, 20)];
-    title11.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    title11.textColor = [UIColor colorWithRed:0/255.0f green:0/255.0f blue:0/255.0f alpha:1.0f];
     title11.textAlignment = NSTextAlignmentRight;
     title11.font = [UIFont fontWithName:@"Arial" size:18];
-    title11.text = @"Geko Paiement";
+    title11.text = @"Geko Pay";
     
     [font11 addSubview:title11];
     
@@ -142,37 +189,42 @@
     
     //UIView *font22 = [[UIView alloc] initWithFrame:CGRectMake(10, yRep, SWIDTH / 2 - 15, (SHEIGHT - 70) / 6 * 2 + 10)];
     UIView *font22 = [[UIView alloc] initWithFrame:CGRectMake(10, yRep, SWIDTH / 2 - 15, (SHEIGHT - 70) / 6 * 3 + 20)];
-    font22.backgroundColor = [UIColor colorWithRed:53/255.0f green:159/255.0f blue:219/255.0f alpha:1.0f];
+    font22.backgroundColor = [UIColor colorWithRed:210/255.0f green:214/255.0f blue:217/255.0f alpha:1.0f];
     
     [background addSubview:font22];
     
     UIImageView *pic22 = [[UIImageView alloc] initWithFrame:CGRectMake(10, font22.frame.size.height - (font22.frame.size.width - 20 + 10), font22.frame.size.width - 20, font22.frame.size.width - 20)];
-    pic22.image = [UIImage imageNamed:@"ic_menu_event_custom.png"];
+    pic22.image = [UIImage imageNamed:@"ic_menu_event_gray_custom.png"];
     
     [font22 addSubview:pic22];
     
     UILabel *title22 = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, font22.frame.size.width - 20, 20)];
-    title22.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    title22.textColor = [UIColor colorWithRed:0/255.0f green:0/255.0f blue:0/255.0f alpha:1.0f];
     title22.textAlignment = NSTextAlignmentCenter;
     title22.font = [UIFont fontWithName:@"Arial" size:18];
     title22.text = @"Geko Events";
     
     [font22 addSubview:title22];
+    
+    UIButton *btn22 = [[UIButton alloc] initWithFrame:CGRectMake(10, yRep, SWIDTH / 2 - 15, (SHEIGHT - 70) / 6 * 3 + 20)];
+    [btn22 addTarget:self action:@selector(goToGekoEvent) forControlEvents:UIControlEventTouchUpInside];
+    
+    [background addSubview:btn22];
     //yRep += font22.frame.size.height - font12.frame.size.height;
     yRep += (SHEIGHT - 70) / 6 * 2 + 20;
     
     UIView *font31 = [[UIView alloc] initWithFrame:CGRectMake(SWIDTH / 2 + 5, yRep, SWIDTH / 2 - 15, (SHEIGHT - 70) / 6)];
-    font31.backgroundColor = [UIColor colorWithRed:56/255.0f green:197/255.0f blue:166/255.0f alpha:1.0f];
+    font31.backgroundColor = [UIColor colorWithRed:210/255.0f green:214/255.0f blue:217/255.0f alpha:1.0f];
     
     [background addSubview:font31];
     
     UIImageView *pic31 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, font31.frame.size.height - 20, font31.frame.size.height - 20)];
-    pic31.image = [UIImage imageNamed:@"ic_menu_profile_custom.png"];
+    pic31.image = [UIImage imageNamed:@"ic_menu_profile_gray_custom.png"];
     
     [font31 addSubview:pic31];
     
     UILabel *title31 = [[UILabel alloc] initWithFrame:CGRectMake(10, font31.frame.size.height - 30, font31.frame.size.width - 20, 20)];
-    title31.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    title31.textColor = [UIColor colorWithRed:0/255.0f green:0/255.0f blue:0/255.0f alpha:1.0f];
     title31.textAlignment = NSTextAlignmentRight;
     title31.font = [UIFont fontWithName:@"Arial" size:18];
     title31.text = @"Mon compte";
@@ -237,6 +289,56 @@
 - (void)goToGekoSetting {
     GekoSettingViewController *gsvc = [[GekoSettingViewController alloc] init];
     [self.navigationController pushViewController:gsvc animated:YES];
+}
+
+- (void)goToGekoEvent {
+    GekoEventViewController *gevc = [[GekoEventViewController alloc] init];
+    [self.navigationController pushViewController:gevc animated:YES];
+}
+
+#pragma mark - JLEBeaconManager delegate
+
+- (void)beaconManager:(JLEBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(JLEBeaconRegion *)region
+{
+    JLEBeacon *temp = [beacons firstObject];
+//    NSLog([NSString stringWithFormat:@"%@\n%d\n%d\n%.2f", [temp.proximityUUID UUIDString], [temp.major intValue], [temp.minor intValue], temp.accuracy]);
+//    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Geko Prenium!" message:[NSString stringWithFormat:@"Profitez de l'offre <beacon id pour dététerminer l'offre: %@", [temp.proximityUUID UUIDString]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//    [av show];
+    
+    if (!hasBeenDisplayed && [temp.proximityUUID UUIDString]) {
+        minorReg = [temp.minor intValue];
+        majorReg = [temp.major intValue];
+        for (int i = 0; i < [listEvent count]; i++) {
+            NSDictionary *beaconEvent = [listEvent objectAtIndex:i];
+            if ([[beaconEvent objectForKey:@"major"] intValue] == majorReg && [[beaconEvent objectForKey:@"minor"] intValue] == minorReg) {
+                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Espace Geko" message:[NSString stringWithFormat:@"%@", [beaconEvent objectForKey:@"message"]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [av show];
+                hasBeenDisplayed = YES;
+            }
+        }
+    } else {
+        if (![temp.proximityUUID UUIDString] || minorReg != [temp.minor intValue]) {
+            hasBeenDisplayed = NO;
+        }
+    }
+    
+}
+
+- (void)beaconManager:(JLEBeaconManager *)manager didEnterRegion:(JLEBeaconRegion *)region
+{
+    UILocalNotification *notification = [UILocalNotification new];
+    notification.alertBody = @"Vous entrez dans un espace Geko!";
+    
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+}
+
+- (void)beaconManager:(JLEBeaconManager *)manager didExitRegion:(JLEBeaconRegion *)region
+{
+//    UILocalNotification *notification = [UILocalNotification new];
+//    notification.alertBody = @"Vous venez de quitter un espace Geko";
+//    
+//    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    hasBeenDisplayed = NO;
 }
 
 @end

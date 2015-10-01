@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E6BDB626591F1ED5B6D595A34EC1D797FC029141",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E6BDB626591F1ED5B6D595A34EC1D797FC029141" : 0,
+    "782B8FFEB52BBE72C687E2187D8121DFDB743546" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B226AFF-0C10-4AA1-AC30-69451047C8BF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E6BDB626591F1ED5B6D595A34EC1D797FC029141" : "iGeko",
+    "782B8FFEB52BBE72C687E2187D8121DFDB743546" : "GEKO"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GEKO",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GEKO.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SebastienFCT\/GEKO.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "782B8FFEB52BBE72C687E2187D8121DFDB743546"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/egeko\/iGeko.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E6BDB626591F1ED5B6D595A34EC1D797FC029141"
+    }
+  ]
+}

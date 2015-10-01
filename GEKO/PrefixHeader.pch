@@ -9,10 +9,19 @@
 #ifndef GEKO_PrefixHeader_pch
 #define GEKO_PrefixHeader_pch
 
+#import <CoreBluetooth/CoreBluetooth.h>
+#import <CoreLocation/CoreLocation.h>
+
+#import "sqlite3.h"
+
+// External resources
+#import <MBProgressHUD.h>
+#import <UIImageView+AFNetworking.h>
+#import "JAALEEBeaconSDK.h"
+#import "FMDatabase.h"
+
+// Custom files
 #import "Variables.h"
 #import "GekoAPI.h"
-#import <MBProgressHUD.h>
-#import "sqlite3.h"
-#import "FMDatabase.h"
 
 #endif

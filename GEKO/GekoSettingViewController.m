@@ -19,6 +19,7 @@
     UISwitch *switch9;
     
     UILabel *statutCarte;
+    NSString *carte_statut;
     
     BOOL pref1;
     BOOL pref2;
@@ -35,7 +36,6 @@
     // Do any additional setup after loading the view.
     
     [self setupEnvironment];
-    [self makeTheView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -70,12 +70,21 @@
         pref8 = [results boolForColumn:@"pref8"];
     }
     [database close];
+    
+    [database open];
+    FMResultSet *results2 = [database executeQuery:@"SELECT * FROM userInfos"];
+    while([results2 next]) {
+        carte_statut = [results2 stringForColumn:@"cartestatus"];
+    }
+    [database close];
+    
+    [self makeTheView];
 }
 
 #pragma mark - UI
 
 - (void)makeTheView {
-    self.view.backgroundColor = [UIColor colorWithRed:57/255.0f green:62/255.0f blue:68/255.0f alpha:1.0f];
+    self.view.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     int yRep = 0;
@@ -88,7 +97,7 @@
     UIView *font0 = [[UIView alloc] initWithFrame:CGRectMake(0, yRep, SWIDTH, 40)];
     font0.backgroundColor = [UIColor colorWithRed:231/255.0f green:76/255.0f blue:61/255.0f alpha:1.0f];
     
-    [background addSubview:font0];
+    [self.view addSubview:font0];
     
     UIImageView *back = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 20, 20)];
     back.image = [UIImage imageNamed:@"ic_back_white.png"];
@@ -111,7 +120,7 @@
     yRep += 20;
     
     UIView *fontrub1 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    fontrub1.backgroundColor = [UIColor colorWithRed:57/255.0f green:62/255.0f blue:68/255.0f alpha:1.0f];
+    fontrub1.backgroundColor = [UIColor clearColor];
     
     [background addSubview:fontrub1];
     
@@ -119,18 +128,20 @@
     rub1.text = @"Notifications";
     rub1.textAlignment = NSTextAlignmentCenter;
     rub1.font = [UIFont fontWithName:@"Arial-BoldMT" size:18];
-    rub1.textColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
+    rub1.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [fontrub1 addSubview:rub1];
     yRep += rub1.frame.size.height + 10;
     
     UIView *cat1shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat1shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat1shad.backgroundColor = [UIColor clearColor];
+    [cat1shad.layer setBorderWidth:1.0f];
+    [cat1shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat1shad];
     
     UIView *cat1 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat1.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat1.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat1];
     
@@ -138,7 +149,7 @@
     titlecat1.text = @"Station service";
     titlecat1.textAlignment = NSTextAlignmentLeft;
     titlecat1.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat1.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat1.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat1 addSubview:titlecat1];
     
@@ -153,12 +164,14 @@
     yRep += cat1.frame.size.height + 10;
     
     UIView *cat2shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat2shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat2shad.backgroundColor = [UIColor clearColor];
+    [cat2shad.layer setBorderWidth:1.0f];
+    [cat2shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat2shad];
     
     UIView *cat2 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat2.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat2.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat2];
     
@@ -166,7 +179,7 @@
     titlecat2.text = @"Sport, loisir & voyage";
     titlecat2.textAlignment = NSTextAlignmentLeft;
     titlecat2.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat2.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat2.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat2 addSubview:titlecat2];
     
@@ -181,12 +194,14 @@
     yRep += cat2.frame.size.height + 10;
     
     UIView *cat3shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat3shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat3shad.backgroundColor = [UIColor clearColor];
+    [cat3shad.layer setBorderWidth:1.0f];
+    [cat3shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat3shad];
     
     UIView *cat3 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat3.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat3.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat3];
     
@@ -194,7 +209,7 @@
     titlecat3.text = @"Restauration & alimentation";
     titlecat3.textAlignment = NSTextAlignmentLeft;
     titlecat3.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat3.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat3.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat3 addSubview:titlecat3];
     
@@ -209,12 +224,14 @@
     yRep += cat3.frame.size.height + 10;
     
     UIView *cat4shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat4shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat4shad.backgroundColor = [UIColor clearColor];
+    [cat4shad.layer setBorderWidth:1.0f];
+    [cat4shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat4shad];
     
     UIView *cat4 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat4.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat4.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat4];
     
@@ -222,7 +239,7 @@
     titlecat4.text = @"Beauté et bien-être";
     titlecat4.textAlignment = NSTextAlignmentLeft;
     titlecat4.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat4.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat4.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat4 addSubview:titlecat4];
     
@@ -237,12 +254,14 @@
     yRep += cat3.frame.size.height + 10;
     
     UIView *cat5shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat5shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat5shad.backgroundColor = [UIColor clearColor];
+    [cat5shad.layer setBorderWidth:1.0f];
+    [cat5shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat5shad];
     
     UIView *cat5 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat5.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat5.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat5];
     
@@ -250,7 +269,7 @@
     titlecat5.text = @"Bricolage";
     titlecat5.textAlignment = NSTextAlignmentLeft;
     titlecat5.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat5.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat5.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat5 addSubview:titlecat5];
     
@@ -265,12 +284,14 @@
     yRep += cat5.frame.size.height + 10;
     
     UIView *cat6shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat6shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat6shad.backgroundColor = [UIColor clearColor];
+    [cat6shad.layer setBorderWidth:1.0f];
+    [cat6shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat6shad];
     
     UIView *cat6 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat6.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat6.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat6];
     
@@ -278,7 +299,7 @@
     titlecat6.text = @"Mode";
     titlecat6.textAlignment = NSTextAlignmentLeft;
     titlecat6.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat6.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat6.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat6 addSubview:titlecat6];
     
@@ -293,12 +314,14 @@
     yRep += cat6.frame.size.height + 10;
     
     UIView *cat7shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat7shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat7shad.backgroundColor = [UIColor clearColor];
+    [cat7shad.layer setBorderWidth:1.0f];
+    [cat7shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat7shad];
     
     UIView *cat7 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat7.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat7.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat7];
     
@@ -306,7 +329,7 @@
     titlecat7.text = @"Supermarché";
     titlecat7.textAlignment = NSTextAlignmentLeft;
     titlecat7.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat7.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat7.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat7 addSubview:titlecat7];
     
@@ -321,12 +344,14 @@
     yRep += cat7.frame.size.height + 10;
     
     UIView *cat8shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat8shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat8shad.backgroundColor = [UIColor clearColor];
+    [cat8shad.layer setBorderWidth:1.0f];
+    [cat8shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat8shad];
     
     UIView *cat8 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat8.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat8.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat8];
     
@@ -334,7 +359,7 @@
     titlecat8.text = @"Services";
     titlecat8.textAlignment = NSTextAlignmentLeft;
     titlecat8.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat8.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat8.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat8 addSubview:titlecat8];
     
@@ -349,7 +374,7 @@
     yRep += cat8.frame.size.height + 20;
     
     UIView *fontrub2 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    fontrub2.backgroundColor = [UIColor colorWithRed:57/255.0f green:62/255.0f blue:68/255.0f alpha:1.0f];
+    fontrub2.backgroundColor = [UIColor clearColor];
     
     [background addSubview:fontrub2];
     
@@ -357,18 +382,20 @@
     rub2.text = @"Ma carte";
     rub2.textAlignment = NSTextAlignmentCenter;
     rub2.font = [UIFont fontWithName:@"Arial-BoldMT" size:18];
-    rub2.textColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
+    rub2.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [fontrub2 addSubview:rub2];
     yRep += rub2.frame.size.height + 10;
     
     UIView *cat9shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    cat9shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    cat9shad.backgroundColor = [UIColor clearColor];
+    [cat9shad.layer setBorderWidth:1.0f];
+    [cat9shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:cat9shad];
     
     UIView *cat9 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    cat9.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    cat9.backgroundColor = [UIColor clearColor];
     
     [background addSubview:cat9];
     
@@ -376,7 +403,7 @@
     titlecat9.text = @"Statut carte";
     titlecat9.textAlignment = NSTextAlignmentLeft;
     titlecat9.font = [UIFont fontWithName:@"Arial" size:14];
-    titlecat9.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    titlecat9.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [cat9 addSubview:titlecat9];
     
@@ -394,12 +421,20 @@
     [switch9 setOn:YES];
     [switch9 setTag:9];
     [switch9 addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
+    [switch9 setEnabled:NO];
     
     [cat9 addSubview:switch9];
+    
+    if ([carte_statut isEqualToString:@"INACTIVE"]) {
+        [switch9 setOn:NO];
+        [switch9 setEnabled:NO];
+        statutCarte.text = @"Carte désactivée";
+        statutCarte.textColor = [UIColor colorWithRed:231/255.0f green:76/255.0f blue:61/255.0f alpha:1.0f];
+    }
     yRep += cat9.frame.size.height + 20;
     
     UIView *font0b = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    font0b.backgroundColor = [UIColor colorWithRed:57/255.0f green:62/255.0f blue:68/255.0f alpha:1.0f];
+    font0b.backgroundColor = [UIColor clearColor];
     
     [background addSubview:font0b];
     
@@ -407,18 +442,20 @@
     title0b.text = @"Deconnexion";
     title0b.textAlignment = NSTextAlignmentCenter;
     title0b.font = [UIFont fontWithName:@"Arial-BoldMT" size:18];
-    title0b.textColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
+    title0b.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [font0b addSubview:title0b];
     yRep += font0b.frame.size.height + 20;
     
     UIView *font1shad = [[UIView alloc] initWithFrame:CGRectMake(20, yRep + 1, SWIDTH - 40, 40)];
-    font1shad.backgroundColor = [UIColor colorWithRed:78/255.0f green:81/255.0f blue:86/255.0f alpha:1.0f];
+    font1shad.backgroundColor = [UIColor clearColor];
+    [font1shad.layer setBorderWidth:1.0f];
+    [font1shad.layer setBorderColor:[UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f].CGColor];
     
     [background addSubview:font1shad];
     
     UIView *font1 = [[UIView alloc] initWithFrame:CGRectMake(20, yRep, SWIDTH - 40, 40)];
-    font1.backgroundColor = [UIColor colorWithRed:40/255.0f green:43/255.0f blue:48/255.0f alpha:1.0f];
+    font1.backgroundColor = [UIColor clearColor];
     
     [background addSubview:font1];
     
@@ -426,7 +463,7 @@
     title1.text = @"Logout";
     title1.textAlignment = NSTextAlignmentCenter;
     title1.font = [UIFont fontWithName:@"Arial" size:14];
-    title1.textColor = [UIColor colorWithRed:250/255.0f green:250/255.0f blue:250/255.0f alpha:1.0f];
+    title1.textColor = [UIColor colorWithRed:26/255.0f green:27/255.0f blue:27/255.0f alpha:1.0f];
     
     [font1 addSubview:title1];
     
@@ -543,7 +580,7 @@
         UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Désactivation de votre carte" message:@"Votre carte a été désactivée" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [av show];
         [switch9 setEnabled:NO];
-        statutCarte.text = @"Carte INVALIDE";
+        statutCarte.text = @"Carte désactivée";
         statutCarte.textColor = [UIColor colorWithRed:231/255.0f green:76/255.0f blue:61/255.0f alpha:1.0f];
     }
 }

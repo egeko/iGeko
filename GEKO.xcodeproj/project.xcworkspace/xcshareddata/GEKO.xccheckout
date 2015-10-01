@@ -12,20 +12,24 @@
 	<dict>
 		<key>782B8FFEB52BBE72C687E2187D8121DFDB743546</key>
 		<string>https://github.com/SebastienFCT/GEKO.git</string>
+		<key>E6BDB626591F1ED5B6D595A34EC1D797FC029141</key>
+		<string>https://github.com/egeko/iGeko.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GEKO.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>782B8FFEB52BBE72C687E2187D8121DFDB743546</key>
+		<string>../../../GEKO</string>
+		<key>E6BDB626591F1ED5B6D595A34EC1D797FC029141</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/SebastienFCT/GEKO.git</string>
+	<string>https://github.com/egeko/iGeko.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>782B8FFEB52BBE72C687E2187D8121DFDB743546</string>
+	<string>E6BDB626591F1ED5B6D595A34EC1D797FC029141</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>782B8FFEB52BBE72C687E2187D8121DFDB743546</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GEKO</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E6BDB626591F1ED5B6D595A34EC1D797FC029141</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iGeko</string>
 		</dict>
 	</array>
 </dict>

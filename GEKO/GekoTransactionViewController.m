@@ -8,7 +8,7 @@
 
 #import "GekoTransactionViewController.h"
 
-#import "MMMaterialDesignSpinner.h"
+//#import "MMMaterialDesignSpinner.h"
 
 @interface GekoTransactionViewController ()
 
@@ -16,7 +16,7 @@
 
 @implementation GekoTransactionViewController {
     UIView *font0;
-    MMMaterialDesignSpinner *spinnerView;
+//    MMMaterialDesignSpinner *spinnerView;
     UILabel *paiement;
     UILabel *statut;
     UILabel *montant;
@@ -24,7 +24,8 @@
     UIView *cancelFont;
     UILabel *cancelLabel;
     UIButton *backBtn;
-    UITextField *pinCode;
+    UITextField *pinCodeTextField;
+    NSString *userid;
     
     UIScrollView *scrollView;
     UIPageControl *pageControl;
@@ -34,6 +35,11 @@
     NSDictionary *secondResp;
     NSDictionary *thirdResp;
     NSString *token;
+    
+    NSString *testPass;
+    int passCount;
+    
+    BOOL hasCancelled;
 }
 
 @synthesize infos = _infos;
@@ -52,6 +58,21 @@
     firstResp = [[NSDictionary alloc] init];
     secondResp = [[NSDictionary alloc] init];
     thirdResp = [[NSDictionary alloc] init];
+    hasCancelled = NO;
+    
+    NSArray *docPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDir = [docPaths objectAtIndex:0];
+    NSString *dbPath = [documentsDir   stringByAppendingPathComponent:@"GekoDB.sqlite"];
+    
+    FMDatabase *database = [FMDatabase databaseWithPath:dbPath];
+    [database open];
+    FMResultSet *results = [database executeQuery:@"SELECT * FROM userInfos"];
+    while([results next]) {
+        userid = [results stringForColumn:@"carteid"];
+        testPass = [results stringForColumn:@"password"];
+    }
+    [database close];
+    passCount = 0;
     
     [self makeTheView];
 }
@@ -98,7 +119,7 @@
     
     [self.view addSubview:canvas];
     
-    cancelFont = [[UIView alloc] initWithFrame:CGRectMake(SWIDTH / 2 - 70, SHEIGHT - 60, 140, 50)];
+    cancelFont = [[UIView alloc] initWithFrame:CGRectMake(SWIDTH / 2 - 70, SHEIGHT - 55, 140, 50)];
     cancelFont.backgroundColor = [UIColor colorWithRed:122/255.0f green:129/255.0f blue:134/255.0f alpha:1.0f];
     
     [self.view addSubview:cancelFont];
@@ -112,23 +133,25 @@
     
     // PAGE 1
     /** statut label **/
-    statut = [[UILabel alloc] initWithFrame:CGRectMake(5, canvas.frame.size.height / 4 - 20, canvas.frame.size.width - 10, 40)];
+    statut = [[UILabel alloc] initWithFrame:CGRectMake(10, canvas.frame.size.height / 4 - 20, canvas.frame.size.width - 20, 40)];
     statut.text = @"Demande de transaction";
     statut.textAlignment = NSTextAlignmentCenter;
     statut.font = [UIFont fontWithName:@"Arial-BoldMT" size:20];
     statut.textColor = [UIColor whiteColor];
+    statut.numberOfLines = 2;
     
     [scrollView addSubview:statut];
     
     /** spinner **/
-    spinnerView = [[MMMaterialDesignSpinner alloc] initWithFrame:CGRectZero];
-    spinnerView.bounds = CGRectMake(0, 0, 100, 100);
-    spinnerView.tintColor = [UIColor colorWithRed:53/255.0f green:159/255.0f blue:219/255.0f alpha:1.0f];
-    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
-    spinnerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:spinnerView];
-    
-    [spinnerView startAnimating];
+//    spinnerView = [[MMMaterialDesignSpinner alloc] initWithFrame:CGRectZero];
+//    spinnerView.bounds = CGRectMake(0, 0, 100, 100);
+//    spinnerView.tintColor = [UIColor colorWithRed:53/255.0f green:159/255.0f blue:219/255.0f alpha:1.0f];
+//    spinnerView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+//    spinnerView.translatesAutoresizingMaskIntoConstraints = NO;
+//    [self.view addSubview:spinnerView];
+//    spinnerView.hidesWhenStopped = YES;
+//    
+//    [spinnerView startAnimating];
     
     // PAGE 2
     /** infos **/
@@ -166,21 +189,21 @@
     [scrollView addSubview:statut2];
     
     /** pin code **/
-    pinCode = [[UITextField alloc] initWithFrame:CGRectMake(90 + canvas.frame.size.width, canvas.frame.size.height / 3 + 30, canvas.frame.size.width - 180, 60)];
-    pinCode.backgroundColor = [UIColor whiteColor];
-    [pinCode.layer setCornerRadius:8.0f];
-    pinCode.textAlignment = NSTextAlignmentCenter;
-    pinCode.secureTextEntry = YES;
-    pinCode.delegate = self;
+    pinCodeTextField = [[UITextField alloc] initWithFrame:CGRectMake(90 + canvas.frame.size.width, canvas.frame.size.height / 3 + 30, canvas.frame.size.width - 180, 60)];
+    pinCodeTextField.backgroundColor = [UIColor whiteColor];
+    [pinCodeTextField.layer setCornerRadius:8.0f];
+    pinCodeTextField.textAlignment = NSTextAlignmentCenter;
+    pinCodeTextField.secureTextEntry = YES;
+    pinCodeTextField.delegate = self;
     
-    [scrollView addSubview:pinCode];
+    [scrollView addSubview:pinCodeTextField];
     
-    UIImageView *btnFont = [[UIImageView alloc] initWithFrame:CGRectMake(canvas.frame.size.width * 3 / 2 + 110, canvas.frame.size.height / 3 + 40, 40, 40)];
+    UIImageView *btnFont = [[UIImageView alloc] initWithFrame:CGRectMake(canvas.frame.size.width * 3 / 2 + 90, canvas.frame.size.height / 3 + 40, 40, 40)];
     btnFont.image = [UIImage imageNamed:@"ic_next_white.png"];
     
     [scrollView addSubview:btnFont];
     
-    UIButton *btnNext = [[UIButton alloc] initWithFrame:CGRectMake(canvas.frame.size.width * 3 / 2 + 100, canvas.frame.size.height / 3 + 30, 60, 60)];
+    UIButton *btnNext = [[UIButton alloc] initWithFrame:CGRectMake(canvas.frame.size.width * 3 / 2 + 90, canvas.frame.size.height / 3 + 30, 60, 60)];
     [btnNext addTarget:self action:@selector(validPin) forControlEvents:UIControlEventTouchUpInside];
     
     [scrollView addSubview:btnNext];
@@ -239,23 +262,24 @@
 
 - (void)cancelView {
     // Add cancel request here
-    NSLog(@"call cancel ws");
-    [self.navigationController popViewControllerAnimated:YES];
+    hasCancelled = YES;
 }
 
 - (void)goToNextStep:(UIButton *)btn {
     float fractionalPage = scrollView.contentOffset.x / scrollView.frame.size.width;
     NSInteger pageRef = lround(fractionalPage);
     if (pageRef == 0 || pageRef == 2) {
-        [spinnerView stopAnimating];
+        //[spinnerView stopAnimating];
     } else if (pageRef == 1) {
-        [spinnerView startAnimating];
+        //[spinnerView startAnimating];
     }
     
     if(pageRef == 2) {
         cancelLabel.text = @"Fermer";
         backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, cancelFont.frame.size.width, cancelFont.frame.size.height)];
         [backBtn addTarget:self action:@selector(backView) forControlEvents:UIControlEventTouchUpInside];
+        
+        [cancelFont addSubview:backBtn];
     }
     
     if (pageRef < 4) {
@@ -281,22 +305,24 @@
 {
     if (textField.text.length >= 4 && range.length == 0)
         return NO;
-    return string;
+    return (BOOL)string;
 }
 
 #pragma mark: server transations
 
 - (void)initTransactions {
     GekoAPI *api = [[GekoAPI alloc] init];
-    [api initTransactionWithCompletion:^(NSString *results){
+    [api initTransactionWithUserid:userid Sellingpoint:_infos Completion:^(NSString *results) {
         if ([results intValue] >= 0) {
             firstResp = api.dicResponse;
             token = [firstResp objectForKey:@"token"];
-            statut.text = @"Récupération des infos paiement";
+            NSString *idpaiement = [firstResp objectForKey:@"id"];
+            statut.text = [NSString stringWithFormat:@"Demande de paiement #%@ en cours", idpaiement];
+            [statut sizeToFit];
             [self findList];
         } else {
             // server error
-            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Server error" message:[NSString stringWithFormat:@"error #%@", results] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Erreur" message:[NSString stringWithFormat:@"Erreur serveur, veuillez contacter la Geko Team."] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [av show];
         }
     }];
@@ -304,7 +330,7 @@
 
 - (void)findList {
     GekoAPI *api = [[GekoAPI alloc] init];
-    [api askListWithCompletion:^(NSString *results){
+    [api askListWithUserid:userid Token:token Completion:^(NSString *results){
         if ([results isEqualToString:@"VALIDER"]) {
             secondResp = api.dicResponse;
             
@@ -314,27 +340,33 @@
             montant.text = [NSString stringWithFormat:@"Montant: %@€", [secondResp objectForKey:@"montant"]];
             enseigne.text = [NSString stringWithFormat:@"Enseigne: %@", [pointDeVente objectForKey:@"enseigne"]];
             paiement.text = [NSString stringWithFormat:@"Paiement %@", [pointDeVente objectForKey:@"id"]];
-            
             [self goToNextStep:nil];
         } else {
-            [self findList];
+            if (!hasCancelled) {
+                [self findList];
+            } else {
+                GekoAPI *api = [[GekoAPI alloc] init];
+                [api cancelPaymentWithToken:token Amount:[secondResp objectForKey:@"montant"] AndCompletion:^(NSString *results){}];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
         }
     }];
 }
 
 - (void)validWithPinCode:(NSString *)pinCode {
     GekoAPI *api = [[GekoAPI alloc] init];
-    [api validePaymentWithToken:token PinCode:nil AndCompletion:^(NSString *results){
+    [api validePaymentWithToken:token PinCode:pinCodeTextField.text AndCompletion:^(NSString *results){
         if ([results isEqualToString:@"FINALISER"]) {
             thirdResp = api.dicResponse;
             [self goToNextStep:nil];
         } else {
             // server error
-            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Server error" message:[NSString stringWithFormat:@"error #%@", results] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Erreur" message:[NSString stringWithFormat:@"Erreur serveur, veuillez contacter la Geko Team."] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [av show];
-
+            
         }
     }];
+
 }
 
 #pragma mark - UIAlertView management
@@ -345,10 +377,27 @@
             break;
             
         case 1:
-            page++;
-            pageControl.currentPage = page;
-            [scrollView setContentOffset:CGPointMake((scrollView.frame.size.width) * page, 0) animated:YES];
-            [self validWithPinCode:pinCode.text];
+            if ([pinCodeTextField.text length] > 0) {
+                if ([pinCodeTextField.text isEqualToString:testPass]) {
+                    page++;
+                    pageControl.currentPage = page;
+                    [scrollView setContentOffset:CGPointMake((scrollView.frame.size.width) * page, 0) animated:YES];
+                    [self validWithPinCode:pinCodeTextField.text];
+                } else {
+                    if (passCount == 3) {
+                        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Transaction annulée, contactez la team Geko pour retrouver votre mot de passe." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                        [av show];
+                        [self cancelView];
+                    } else {
+                        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Mauvais mot de passe" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                        [av show];
+                        passCount++;
+                    }
+                }
+            } else {
+                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Vous devez entrer votre pincode" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [av show];
+            }
             break;
             
         default:

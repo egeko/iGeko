@@ -15,12 +15,18 @@
 @end
 
 @implementation GekoMapViewController {
-    NSMutableArray *json;
+    NSArray *json;
     CLLocationManager *locationManager;
     
     UIView *menuFont;
     BOOL menuShown;
     UIView *font0;
+    UIView *footer;
+    UILabel *title_footer;
+    
+    int currentCat;
+    NSArray *liste;
+    NSArray *categories;
 }
 
 @synthesize map = _map;
@@ -63,17 +69,20 @@
 #pragma mark - setup
 
 - (void)setupEnvironment {
-    
-    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    }
-    
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"gps" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    
-    json = [[NSMutableArray alloc] init];
-    
-    json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    categories = [[NSArray alloc] initWithObjects:@"Stations", @"Sport", @"Restauration", @"Beauté", @"Bricolage", @"Mode", @"Supermarché", @"Services", nil];
+    GekoAPI *api = [[GekoAPI alloc] init];
+    [api getAllShopWithCompletion:^(NSString *results){
+        if ([results isEqual:@"OK"]) {
+            json = api.arrayResponse;
+            currentCat = 1;
+        } else {
+            // server error
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Erreur" message:[NSString stringWithFormat:@"Erreur serveur, veuillez contacter la Geko Team."] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [av show];
+        }
+        [self makeTheView];
+        [self makeLateralMenu];
+    }];
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -85,58 +94,170 @@
 }
 
 - (void)makeLateralMenu {
-    menuFont = [[UIView alloc] initWithFrame:CGRectMake(SWIDTH - 100, 40 - (SHEIGHT - 40), 100, SHEIGHT - 40)];
+    menuFont = [[UIView alloc] initWithFrame:CGRectMake(SWIDTH - 200, 40 - (SHEIGHT - 40), 200, SHEIGHT - 80)];
     menuFont.backgroundColor = [UIColor colorWithRed:231/255.0f green:76/255.0f blue:61/255.0f alpha:1.0f];
     menuShown = NO;
     
-    for (int i = 0; i < 8; i++) {
+    for (int i = 1; i < 8; i++) {
         UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(10, (5 + (menuFont.frame.size.height - 45) / 8) * i, menuFont.frame.size.width - 20, 1)];
-        sep.backgroundColor = [UIColor colorWithRed:80/255.0f green:80/255.0f blue:80/255.0f alpha:1.0f];
+        sep.backgroundColor = [UIColor colorWithRed:244/255.0f green:244/255.0f blue:244/255.0f alpha:1.0f];
         
         [menuFont addSubview:sep];
     }
     
     [self.view addSubview:menuFont];
     
-    UIImageView *img1 = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8)];
+    UIImageView *img1 = [[UIImageView alloc] initWithFrame:CGRectMake(15 + 10, 5 + 10, (menuFont.frame.size.height - 45) / 8 - 20, (menuFont.frame.size.height - 45) / 8 - 20)];
     img1.image = [UIImage imageNamed:@"ic_paiement_1_white.png"];
     
     [menuFont addSubview:img1];
     
-    UIImageView *img2 = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5 + (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8)];
+    UILabel *lab1 = [[UILabel alloc] initWithFrame:CGRectMake(15 + (menuFont.frame.size.height - 45) / 8, 5, (menuFont.frame.size.height - 45) / 8 * 2.7, (menuFont.frame.size.height - 45) / 8)];
+    lab1.textColor = [UIColor whiteColor];
+    lab1.font = [UIFont fontWithName:@"Arial" size:16];
+    lab1.textAlignment = NSTextAlignmentLeft;
+    lab1.text = @"Stations";
+    
+    [menuFont addSubview:lab1];
+    
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(15, 5, (menuFont.frame.size.height - 45) / 8 * 3.6, (menuFont.frame.size.height - 45) / 8)];
+    [btn1 setTag:1];
+    [btn1 addTarget:self action:@selector(changeCat:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [menuFont addSubview:btn1];
+    
+    UIImageView *img2 = [[UIImageView alloc] initWithFrame:CGRectMake(15 + 10, 5 + (menuFont.frame.size.height - 45) / 8 + 10, (menuFont.frame.size.height - 45) / 8 - 20, (menuFont.frame.size.height - 45) / 8 - 20)];
     img2.image = [UIImage imageNamed:@"ic_paiement_2_white.png"];
     
     [menuFont addSubview:img2];
     
-    UIImageView *img3 = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10 + ((menuFont.frame.size.height - 45) / 8) * 2, (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8)];
+    UILabel *lab2 = [[UILabel alloc] initWithFrame:CGRectMake(15 + (menuFont.frame.size.height - 45) / 8, 5 + (menuFont.frame.size.height - 45) / 8 + 5, (menuFont.frame.size.height - 45) / 8 * 2.7, (menuFont.frame.size.height - 45) / 8)];
+    lab2.textColor = [UIColor whiteColor];
+    lab2.font = [UIFont fontWithName:@"Arial" size:16];
+    lab2.textAlignment = NSTextAlignmentLeft;
+    lab2.text = @"Sport";
+    
+    [menuFont addSubview:lab2];
+    
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(15, 5 + (menuFont.frame.size.height - 45) / 8 + 5, (menuFont.frame.size.height - 45) / 8 * 3.6, (menuFont.frame.size.height - 45) / 8)];
+    [btn2 setTag:2];
+    [btn2 addTarget:self action:@selector(changeCat:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [menuFont addSubview:btn2];
+    
+    UIImageView *img3 = [[UIImageView alloc] initWithFrame:CGRectMake(15 + 10, 10 + ((menuFont.frame.size.height - 45) / 8) * 2 + 10, (menuFont.frame.size.height - 45) / 8 - 20, (menuFont.frame.size.height - 45) / 8 - 20)];
     img3.image = [UIImage imageNamed:@"ic_paiement_3_white.png"];
     
     [menuFont addSubview:img3];
     
-    UIImageView *img4 = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15 + ((menuFont.frame.size.height - 45) / 8) * 3, (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8)];
+    UILabel *lab3 = [[UILabel alloc] initWithFrame:CGRectMake(15 + (menuFont.frame.size.height - 45) / 8, 5 + (menuFont.frame.size.height - 45) / 8 * 2 + 10, (menuFont.frame.size.height - 45) / 8 * 2.7, (menuFont.frame.size.height - 45) / 8)];
+    lab3.textColor = [UIColor whiteColor];
+    lab3.font = [UIFont fontWithName:@"Arial" size:16];
+    lab3.textAlignment = NSTextAlignmentLeft;
+    lab3.text = @"Restauration";
+    
+    [menuFont addSubview:lab3];
+    
+    UIButton *btn3 = [[UIButton alloc] initWithFrame:CGRectMake(15, 5 + ((menuFont.frame.size.height - 45) / 8) * 2 + 10, (menuFont.frame.size.height - 45) / 8 * 3.6, (menuFont.frame.size.height - 45) / 8)];
+    [btn3 setTag:3];
+    [btn3 addTarget:self action:@selector(changeCat:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [menuFont addSubview:btn3];
+    
+    UIImageView *img4 = [[UIImageView alloc] initWithFrame:CGRectMake(15 + 10, 15 + ((menuFont.frame.size.height - 45) / 8) * 3 + 10, (menuFont.frame.size.height - 45) / 8 - 20, (menuFont.frame.size.height - 45) / 8 - 20)];
     img4.image = [UIImage imageNamed:@"ic_paiement_4_white.png"];
     
     [menuFont addSubview:img4];
     
-    UIImageView *img5 = [[UIImageView alloc] initWithFrame:CGRectMake(15, 20 + ((menuFont.frame.size.height - 45) / 8) * 4, (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8)];
+    UILabel *lab4 = [[UILabel alloc] initWithFrame:CGRectMake(15 + (menuFont.frame.size.height - 45) / 8, 5 + (menuFont.frame.size.height - 45) / 8 * 3 + 15, (menuFont.frame.size.height - 45) / 8 * 2.7, (menuFont.frame.size.height - 45) / 8)];
+    lab4.textColor = [UIColor whiteColor];
+    lab4.font = [UIFont fontWithName:@"Arial" size:16];
+    lab4.textAlignment = NSTextAlignmentLeft;
+    lab4.text = @"Beauté";
+    
+    [menuFont addSubview:lab4];
+    
+    UIButton *btn4 = [[UIButton alloc] initWithFrame:CGRectMake(15, 5 + ((menuFont.frame.size.height - 45) / 8) * 3 + 15, (menuFont.frame.size.height - 45) / 8 * 3.6, (menuFont.frame.size.height - 45) / 8)];
+    [btn4 setTag:4];
+    [btn4 addTarget:self action:@selector(changeCat:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [menuFont addSubview:btn4];
+    
+    UIImageView *img5 = [[UIImageView alloc] initWithFrame:CGRectMake(15 + 10, 20 + ((menuFont.frame.size.height - 45) / 8) * 4 + 10, (menuFont.frame.size.height - 45) / 8 - 20, (menuFont.frame.size.height - 45) / 8 - 20)];
     img5.image = [UIImage imageNamed:@"ic_paiement_5_white.png"];
     
     [menuFont addSubview:img5];
     
-    UIImageView *img6 = [[UIImageView alloc] initWithFrame:CGRectMake(15, 25 + ((menuFont.frame.size.height - 45) / 8) * 5, (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8)];
+    UILabel *lab5 = [[UILabel alloc] initWithFrame:CGRectMake(15 + (menuFont.frame.size.height - 45) / 8, 5 + (menuFont.frame.size.height - 45) / 8 * 4 + 20, (menuFont.frame.size.height - 45) / 8 * 2.7, (menuFont.frame.size.height - 45) / 8)];
+    lab5.textColor = [UIColor whiteColor];
+    lab5.font = [UIFont fontWithName:@"Arial" size:16];
+    lab5.textAlignment = NSTextAlignmentLeft;
+    lab5.text = @"Bricolage";
+    
+    [menuFont addSubview:lab5];
+    
+    UIButton *btn5 = [[UIButton alloc] initWithFrame:CGRectMake(15, 5 + ((menuFont.frame.size.height - 45) / 8) * 4 + 20, (menuFont.frame.size.height - 45) / 8 * 3.6, (menuFont.frame.size.height - 45) / 8)];
+    [btn5 setTag:5];
+    [btn5 addTarget:self action:@selector(changeCat:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [menuFont addSubview:btn5];
+    
+    UIImageView *img6 = [[UIImageView alloc] initWithFrame:CGRectMake(15 + 10, 25 + ((menuFont.frame.size.height - 45) / 8) * 5 + 10, (menuFont.frame.size.height - 45) / 8 - 20, (menuFont.frame.size.height - 45) / 8 - 20)];
     img6.image = [UIImage imageNamed:@"ic_paiement_6_white.png"];
     
     [menuFont addSubview:img6];
     
-    UIImageView *img7 = [[UIImageView alloc] initWithFrame:CGRectMake(15, 30 + ((menuFont.frame.size.height - 45) / 8) * 6, (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8)];
+    UILabel *lab6 = [[UILabel alloc] initWithFrame:CGRectMake(15 + (menuFont.frame.size.height - 45) / 8, 5 + (menuFont.frame.size.height - 45) / 8 * 5 + 25, (menuFont.frame.size.height - 45) / 8 * 2.7, (menuFont.frame.size.height - 45) / 8)];
+    lab6.textColor = [UIColor whiteColor];
+    lab6.font = [UIFont fontWithName:@"Arial" size:16];
+    lab6.textAlignment = NSTextAlignmentLeft;
+    lab6.text = @"Mode";
+    
+    [menuFont addSubview:lab6];
+    
+    UIButton *btn6 = [[UIButton alloc] initWithFrame:CGRectMake(15, 5 + ((menuFont.frame.size.height - 45) / 8) * 5 + 25, (menuFont.frame.size.height - 45) / 8 * 3.6, (menuFont.frame.size.height - 45) / 8)];
+    [btn6 setTag:6];
+    [btn6 addTarget:self action:@selector(changeCat:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [menuFont addSubview:btn6];
+    
+    UIImageView *img7 = [[UIImageView alloc] initWithFrame:CGRectMake(15 + 10, 30 + ((menuFont.frame.size.height - 45) / 8) * 6 + 10, (menuFont.frame.size.height - 45) / 8 - 20, (menuFont.frame.size.height - 45) / 8 - 20)];
     img7.image = [UIImage imageNamed:@"ic_paiement_7_white.png"];
     
     [menuFont addSubview:img7];
     
-    UIImageView *img8 = [[UIImageView alloc] initWithFrame:CGRectMake(15, 35 + ((menuFont.frame.size.height - 45) / 8) * 7, (menuFont.frame.size.height - 45) / 8, (menuFont.frame.size.height - 45) / 8)];
+    UILabel *lab7 = [[UILabel alloc] initWithFrame:CGRectMake(15 + (menuFont.frame.size.height - 45) / 8, 5 + (menuFont.frame.size.height - 45) / 8 * 6 + 30, (menuFont.frame.size.height - 45) / 8 * 2.7, (menuFont.frame.size.height - 45) / 8)];
+    lab7.textColor = [UIColor whiteColor];
+    lab7.font = [UIFont fontWithName:@"Arial" size:16];
+    lab7.textAlignment = NSTextAlignmentLeft;
+    lab7.text = @"Supermarché";
+    
+    [menuFont addSubview:lab7];
+    
+    UIButton *btn7 = [[UIButton alloc] initWithFrame:CGRectMake(15, 5 + ((menuFont.frame.size.height - 45) / 8) * 6 + 30, (menuFont.frame.size.height - 45) / 8 * 3.6, (menuFont.frame.size.height - 45) / 8)];
+    [btn7 setTag:7];
+    [btn7 addTarget:self action:@selector(changeCat:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [menuFont addSubview:btn7];
+    
+    UIImageView *img8 = [[UIImageView alloc] initWithFrame:CGRectMake(15 + 10, 35 + ((menuFont.frame.size.height - 45) / 8) * 7 + 10, (menuFont.frame.size.height - 45) / 8 - 20, (menuFont.frame.size.height - 45) / 8 - 20)];
     img8.image = [UIImage imageNamed:@"ic_paiement_8_white.png"];
     
     [menuFont addSubview:img8];
+    
+    UILabel *lab8 = [[UILabel alloc] initWithFrame:CGRectMake(15 + (menuFont.frame.size.height - 45) / 8, 5 + (menuFont.frame.size.height - 45) / 8 * 7 + 35, (menuFont.frame.size.height - 45) / 8 * 2.7, (menuFont.frame.size.height - 45) / 8)];
+    lab8.textColor = [UIColor whiteColor];
+    lab8.font = [UIFont fontWithName:@"Arial" size:16];
+    lab8.textAlignment = NSTextAlignmentLeft;
+    lab8.text = @"Services";
+    
+    [menuFont addSubview:lab8];
+    
+    UIButton *btn8 = [[UIButton alloc] initWithFrame:CGRectMake(15, 5 + ((menuFont.frame.size.height - 45) / 8) * 7 + 35, (menuFont.frame.size.height - 45) / 8 * 3.6, (menuFont.frame.size.height - 45) / 8)];
+    [btn8 setTag:8];
+    [btn8 addTarget:self action:@selector(changeCat:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [menuFont addSubview:btn8];
     
     [self.view addSubview:font0];
 }
@@ -147,17 +268,20 @@
     }
     
     for (NSDictionary *obj in responseData) {
-        NSNumber *latitude = [obj objectForKey:@"lat"];
-        NSNumber *longitude = [obj objectForKey:@"long"];
-        NSString *crimeDescription = [obj objectForKey:@"SiteName"];
-        NSString *address = [obj objectForKey:@"Street Address"];
+        NSNumber *latitude = [obj objectForKey:@"gpsLatitude"];
+        NSNumber *longitude = [obj objectForKey:@"gpsLongitude"];
+        NSString *crimeDescription = [obj objectForKey:@"enseigne"];
+        NSString *address = [obj objectForKey:@"adresse"];
+        NSString *type = [obj objectForKey:@"logo"];
         
-        if (!([(NSString *)[obj objectForKey:@"lat"] isEqual:@"0"] && [(NSString *)[obj objectForKey:@"long"] isEqual:@"0"])) {
-            CLLocationCoordinate2D coordinate;
-            coordinate.latitude = latitude.doubleValue;
-            coordinate.longitude = longitude.doubleValue;
-            MyLocation *annotation = [[MyLocation alloc] initWithName:crimeDescription address:address coordinate:coordinate] ;
-            [_map addAnnotation:annotation];
+        if(!([obj objectForKey:@"gpsLatitude"] == (id)[NSNull null] || [obj objectForKey:@"gpsLongitude"] == (id)[NSNull null])){
+            if (!([(NSString *)[obj objectForKey:@"gpsLatitude"] isEqual:@"0"] && [(NSString *)[obj objectForKey:@"gpsLongitude"] isEqual:@"0"])) {
+                CLLocationCoordinate2D coordinate;
+                coordinate.latitude = latitude.doubleValue;
+                coordinate.longitude = longitude.doubleValue;
+                MyLocation *annotation = [[MyLocation alloc] initWithName:crimeDescription address:address coordinate:coordinate typepic:type cat:currentCat] ;
+                [_map addAnnotation:annotation];
+            }
         }
     }
 }
@@ -204,7 +328,7 @@
     [font0 addSubview:title0];
     yRep += font0.frame.size.height;
     
-    _map = [[MKMapView alloc] initWithFrame:CGRectMake(0, yRep, SWIDTH, SHEIGHT - yRep)];
+    _map = [[MKMapView alloc] initWithFrame:CGRectMake(0, yRep, SWIDTH, SHEIGHT - yRep - 40)];
     _map.delegate = self;
     
     _map.delegate = self;
@@ -215,7 +339,29 @@
     [_map setScrollEnabled:YES];
     
     [self.view addSubview:_map];
-    [self plotCrimePositions:json];
+    
+    UIButton *centerMap = [[UIButton alloc] initWithFrame:CGRectMake(SWIDTH - 60, SHEIGHT - 100, 40, 40)];
+    [centerMap setImage:[UIImage imageNamed:@"ic_map_center.png"] forState:UIControlStateNormal];
+    [centerMap addTarget:self action:@selector(centerMap) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:centerMap];
+    
+    footer = [[UIView alloc] initWithFrame:CGRectMake(0, SHEIGHT - 40, SWIDTH, 40)];
+    footer.backgroundColor = [UIColor colorWithRed:231/255.0f green:76/255.0f blue:61/255.0f alpha:1.0f];
+    
+    [self.view addSubview:footer];
+    
+    title_footer = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, font0.frame.size.width - 100, font0.frame.size.height)];
+    title_footer.text = @"Stations services";
+    title_footer.textAlignment = NSTextAlignmentCenter;
+    title_footer.font = [UIFont fontWithName:@"Arial" size:18];
+    title_footer.textColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
+    
+    [footer addSubview:title_footer];
+    
+    NSDictionary *type = [json objectAtIndex:(currentCat - 1)];
+    liste = [type objectForKey:@"liste"];
+    [self plotCrimePositions:liste];
 }
 
 #pragma mark - MKMap management
@@ -225,14 +371,13 @@
     if ([annotation isKindOfClass:[MyLocation class]]) {
         
         MKAnnotationView *annotationView = (MKAnnotationView *) [_map dequeueReusableAnnotationViewWithIdentifier:identifier];
-        if (annotationView == nil) {
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-            annotationView.enabled = YES;
-            annotationView.canShowCallout = YES;
-            annotationView.image = [UIImage imageNamed:@"ic_engen_pins.png"];
-        } else {
-            annotationView.annotation = annotation;
-        }
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        annotationView.enabled = YES;
+        annotationView.canShowCallout = YES;
+        
+        MyLocation *test = (MyLocation *)annotation;
+        NSString *temp2 = [test getType];
+        annotationView.image = [UIImage imageNamed:temp2];
         
         return annotationView;
     }
@@ -242,7 +387,11 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
+    
+}
+
+- (void)centerMap {
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(_map.userLocation.coordinate, 800, 800);
     [_map setRegion:[_map regionThatFits:region] animated:YES];
 }
 
@@ -264,7 +413,15 @@
         }];
         menuShown = YES;
     }
-    
+}
+
+- (void)changeCat:(UIButton *)button {
+    currentCat = (int)[button tag];
+    title_footer.text = [categories objectAtIndex:(currentCat - 1)];
+    NSDictionary *type = [json objectAtIndex:(currentCat - 1)];
+    liste = [type objectForKey:@"liste"];
+    [self plotCrimePositions:liste];
+    [self showMenu];
 }
 
 @end
